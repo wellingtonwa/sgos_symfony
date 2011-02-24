@@ -1,0 +1,33 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Estado
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          estado
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+    
+    config:
+      fields:
+        idPais: { label: Pais, help: Selecione o pais a qual o estado pertence }
+      list:
+        title: Lista de Estado
+        layout: tabular
+        display: [=nome, =sigla, =Pais]
+        #actions: {_new: {label: Novo Estado}}
+        batch_actions: {_delete: {label: Excluir Estados Selecionados}}
+        #object_actions: {_edit: {label: Edtar}, _delete: {label: Excluir}}
+        max_per_page: 10
+      filter:
+        display: [nome, sigla, idPais]
+      form: ~
+      edit:
+        title: Alterando Estado "%%nome%% (%%sigla%%)"
+        actions: {_save: {label: Salvar}, _list: {label: Voltar}, _delete: {label: Excluir}}
+      new:
+        title: Cadastrando Estado
+        actions: {_save: {label: Salvar}, _list: {label: Voltar}}

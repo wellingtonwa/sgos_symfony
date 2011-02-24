@@ -1,0 +1,29 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Status
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              Status
+    plural:                Status
+    route_prefix:          status
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        created_at: {label: Criado em}
+      list:
+        title: Lista de Status
+      filter:
+        display: [nome, significado, created_at]
+      form:
+        display: [nome, significado]
+      edit:
+        title: Editando status - %%nome%%
+        actions: {_save: {label: salvar}, _list: {label: voltar}, _delete: {label: excluir}}
+      new:
+        title: Novo status
+        actions: {_save:{label: salvar}, _list:{label: voltar}}

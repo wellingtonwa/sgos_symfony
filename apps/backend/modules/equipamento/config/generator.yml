@@ -1,0 +1,31 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Equipamento
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          equipamento
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        idTipoEquipamento: {label: Tipo de Equipamento}
+      list:
+        title: Lista de Equipamentos
+        display: [nome, tipoEquipamento, cliente]
+      filter:
+        display: [nome, descricao, idTipoEquipamento, idCliente]
+      form:    ~
+      edit:
+        title: editando - %%nome%%
+        display: [nome, descricao, idTipoEquipamento, idCliente]
+        actions: {_save: {label: salvar}, _list: {label: voltar}, _delete: {label: excluir}}
+      new:
+        title: Novo Equipamento
+        display: [nome, descricao, idTipoEquipamento, idCliente]
+        actions: {_save: {label: salvar}, _list: {label: voltar}}
