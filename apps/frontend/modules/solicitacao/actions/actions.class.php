@@ -18,5 +18,18 @@ class solicitacaoActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
       $this->form = new SolicitacaoForm();
+
+      if($request->isMethod('post')){
+        $this->form->bind($request->getParameter('solicitacao'));
+        if($this->form->isValid()){
+            $this->redirect('solicitacao/agradecimento?'.http_build_query($this->form->getValues()));
+        }
+
+      }
   }
+
+  public function executeAgradecimento(sfWebRequest $request){
+
+  }
+
 }

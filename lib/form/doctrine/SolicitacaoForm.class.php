@@ -14,14 +14,14 @@ class SolicitacaoForm extends sfForm{
         ));
 
         $this->setValidators(array(
-          'nome'       => new sfValidatorString(array('max_length' => 255)),
-          'email'   => new sfValidatorEmail(),
-          'telefone' => new sfValidatorString(array('max_length' => 14)),
-          'celular' => new sfValidatorString(array('max_length' => 14)),
+          'nome'       => new sfValidatorString(array('max_length' => 255, 'required'=>true)),
+          'email'   => new sfValidatorEmail(array('required'=>true)),
+          'telefone' => new sfValidatorString(array('max_length' => 14, 'required'=>true)),
+          'celular' => new sfValidatorString(array('max_length' => 14, 'required'=>true)),
+          'descricao_problema' =>new sfValidatorString(array('required'=>true)),
         ));
 
-
-        $this->widgetSchema->setNameFormater('solicitacao[%s]');
+        $this->widgetSchema->setNameFormat('solicitacao[%s]');
 
     }
 }
