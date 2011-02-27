@@ -702,3 +702,31 @@ Feb 25 16:07:56 symfony [info] {sfWebDebugLogger} Factories 64.52 ms (1)
 Feb 25 16:07:56 symfony [info] {sfWebDebugLogger} Action "solicitacao/agradecimento" 0.18 ms (1)
 Feb 25 16:07:56 symfony [info] {sfWebDebugLogger} View "Success" for "solicitacao/agradecimento" 31.58 ms (1)
 Feb 25 16:07:56 symfony [info] {sfWebResponse} Send content (29863 o)
+Feb 27 14:02:00 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Feb 27 14:02:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 27 14:02:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 27 14:02:01 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Feb 27 14:02:01 symfony [info] {sfPHPView} Render "C:\sistemas\sgosSymfony\apps\frontend\modules/home/templates/indexSuccess.php"
+Feb 27 14:02:01 symfony [info] {sfPHPView} Decorate content with "C:\sistemas\sgosSymfony\apps\frontend\templates/layout.php"
+Feb 27 14:02:01 symfony [info] {sfPHPView} Render "C:\sistemas\sgosSymfony\apps\frontend\templates/layout.php"
+Feb 27 14:02:01 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 27 14:02:01 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 27 14:02:01 symfony [info] {sfWebDebugLogger} Configuration 29.51 ms (9)
+Feb 27 14:02:01 symfony [info] {sfWebDebugLogger} Factories 435.02 ms (1)
+Feb 27 14:02:01 symfony [info] {sfWebDebugLogger} Action "home/index" 0.18 ms (1)
+Feb 27 14:02:01 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 143.05 ms (1)
+Feb 27 14:02:01 symfony [info] {sfWebResponse} Send content (27934 o)
+Feb 27 14:02:05 symfony [info] {sfPatternRouting} Match route "enviar_solicitacao" (/solicitacao) for /solicitacao with parameters array (  'module' => 'solicitacao',  'action' => 'index',)
+Feb 27 14:02:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 27 14:02:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 27 14:02:05 symfony [info] {solicitacaoActions} Call "solicitacaoActions->executeIndex()"
+Feb 27 14:02:05 symfony [info] {sfPHPView} Render "C:\sistemas\sgosSymfony\apps\frontend\modules/solicitacao/templates/indexSuccess.php"
+Feb 27 14:02:05 symfony [info] {sfPHPView} Decorate content with "C:\sistemas\sgosSymfony\apps\frontend\templates/layout.php"
+Feb 27 14:02:05 symfony [info] {sfPHPView} Render "C:\sistemas\sgosSymfony\apps\frontend\templates/layout.php"
+Feb 27 14:02:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 27 14:02:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 27 14:02:05 symfony [info] {sfWebDebugLogger} Configuration 25.29 ms (9)
+Feb 27 14:02:05 symfony [info] {sfWebDebugLogger} Factories 56.77 ms (1)
+Feb 27 14:02:05 symfony [info] {sfWebDebugLogger} Action "solicitacao/index" 124.90 ms (1)
+Feb 27 14:02:05 symfony [info] {sfWebDebugLogger} View "Success" for "solicitacao/index" 71.49 ms (1)
+Feb 27 14:02:05 symfony [info] {sfWebResponse} Send content (31069 o)
