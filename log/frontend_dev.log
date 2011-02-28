@@ -1,0 +1,4 @@
+Feb 28 08:18:29 symfony [info] {sfPatternRouting} Match route "enviar_solicitacao" (/solicitacao) for /solicitacao with parameters array (  'module' => 'solicitacao',  'action' => 'index',)
+Feb 28 08:18:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 28 08:18:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 28 08:18:29 symfony [info] {solicitacaoActions} Call "solicitacaoActions->executeIndex()"
