@@ -59,7 +59,7 @@ abstract class BaseOrdemServico extends sfDoctrineRecord
              'values' => 
              array(
               0 => 'Em aberto',
-              1 => 'Em execucao',
+              1 => 'Em execução',
               2 => 'Pendente',
               3 => 'Cancelado',
               4 => 'Concluído',

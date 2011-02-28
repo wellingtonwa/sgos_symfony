@@ -21,7 +21,28 @@ class solicitacaoActions extends sfActions
 
       if($request->isMethod('post')){
         $this->form->bind($request->getParameter('solicitacao'));
+        $this->model = $this->getRoute()->getObject();
+
+        echo $this->model->getNome();
         if($this->form->isValid()){
+
+            $this->redirect('solicitacao/agradecimento?'.http_build_query($this->form->getValues()));
+        }
+
+      }
+  }
+
+
+  public function executeCreate(sfWebRequest $request){
+      $this->form = new SolicitacaoForm();
+
+    if($request->isMethod('post')){
+        $this->form->bind($request->getParameter('solicitacao'));
+        $this->model = $this->getRoute()->getObject();
+
+        echo $this->model->getNome();
+        if($this->form->isValid()){
+
             $this->redirect('solicitacao/agradecimento?'.http_build_query($this->form->getValues()));
         }
 

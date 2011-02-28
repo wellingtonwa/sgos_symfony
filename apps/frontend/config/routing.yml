@@ -8,8 +8,15 @@ homepage:
 
 
 enviar_solicitacao:
-  url:  /solicitacao
-  param: { module: solicitacao, action: index}
+  class: sfDoctrineRouteCollection
+  options:
+    model: Solicitacao
+    module: solicitacao
+    prefix_path:  /solicitacao
+    column: id
+    with_wildcard_routes: true
+  # url:  /solicitacao
+  # param: { module: solicitacao, action: index}
 
 salvar_solicitacao:
   url: /solicitacao/enviar
