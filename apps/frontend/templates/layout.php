@@ -22,7 +22,7 @@
         <div id="header">
             TOPO
             <div id="header_menu"><br/><br/>
-                <a href="<?php echo url_for("enviar_solicitacao") ?>">Enviar Solicitação</a>
+                <a href="<?php echo url_for("solicitacao/new") ?>">Enviar Solicitação</a>
             </div>
         </div>
         <div id="centro">

@@ -1,23 +1,26 @@
 <?php
 
-class SolicitacaoForm extends sfForm{
+class SolicitacaoForm extends BaseSolicitacaoForm{
 
 
     public function   configure() {
-        
-        $this->setWidgets(array(
-          'nome'       => new sfWidgetFormInputText(),
-          'email'      => new sfWidgetFormInputText(),
-          'telefone'   => new sfWidgetFormInputText(),
-          'celular'    => new sfWidgetFormInputText(),
-          'descricao_problema'    => new sfWidgetFormTextarea(array('label'=>'Descricao do problema')),
-        ));
+
+
+        unset(
+            $this['created_at'],
+            $this['updated_at']
+                );
+
+        $this->widgetSchema['email']->setOption('label', 'E-mail');
+        $this->widgetSchema['telefone1']->setOption('label', 'Telefone Comercial');
+        $this->widgetSchema['telefone2']->setOption('label', 'Telefone Celular');
 
         $this->setValidators(array(
-          'nome'       => new sfValidatorString(array('max_length' => 255, 'required'=>true)),
-          'email'   => new sfValidatorEmail(array('required'=>true)),
-          'telefone' => new sfValidatorString(array('max_length' => 14, 'required'=>true)),
-          'celular' => new sfValidatorString(array('max_length' => 14, 'required'=>true)),
+          'id'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+          'nome'        => new sfValidatorString(array('max_length' => 255, 'required'=>true)),
+          'email'       => new sfValidatorEmail(array('required'=>true)),
+          'telefone1'   => new sfValidatorString(array('max_length' => 14, 'required'=>true)),
+          'telefone2'   => new sfValidatorString(array('max_length' => 14, 'required'=>true)),
           'descricao_problema' =>new sfValidatorString(array('required'=>true)),
         ));
 
