@@ -30,7 +30,7 @@ abstract class BaseOrdemServicoForm extends BaseFormDoctrine
       'id'                 => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'idCliente'          => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Cliente'), 'required' => false)),
       'idEquipamento'      => new sfValidatorInteger(array('required' => false)),
-      'status'             => new sfValidatorChoice(array('choices' => array(0 => 'Em aberto', 1 => 'Em execucao', 2 => 'Pendente', 3 => 'Cancelado', 4 => 'Concluído'), 'required' => false)),
+      'status'             => new sfValidatorChoice(array('choices' => array(0 => 'Em aberto', 1 => 'Em execução', 2 => 'Pendente', 3 => 'Cancelado', 4 => 'Concluído'), 'required' => false)),
       'descricao_problema' => new sfValidatorString(array('max_length' => 4000, 'required' => false)),
       'created_at'         => new sfValidatorDateTime(),
       'updated_at'         => new sfValidatorDateTime(),

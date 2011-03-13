@@ -1,3 +1,12 @@
+solicitacao:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Solicitacao
+    module:               solicitacao
+    prefix_path:          /solicitacao
+    column:               id
+    with_wildcard_routes: true
+
 ordem_servico_ordemSevico:
   class: sfDoctrineRouteCollection
   options:
@@ -158,6 +167,10 @@ ordemServico_pesquisaComponente:
     module: ordemServico
     action: pesquisaComponente
 
+# Rotas para as solicitações feitas pelo site
+solicitacao_newOS:
+  url: /solicitacao/newOS
+  param: { module: solicitacao, action: newOS}
 
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing

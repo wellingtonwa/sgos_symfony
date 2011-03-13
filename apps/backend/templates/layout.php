@@ -4,7 +4,6 @@
     <?php use_helper('I18N') ?>
     <?php include_http_metas() ?>
     <?php include_metas() ?>
-    <?php include_title() ?>
     <?php use_javascript('jquery-1.4.2.min.js') ?>
     <?php use_javascript('jquery-ui-1.8.4.custom.min.js') ?>
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -13,8 +12,12 @@
     <?php use_stylesheet('jquery-ui-1.8.2.custom.css') ?>
     <?php use_stylesheet('template.css') ?>
     <?php include_stylesheets() ?>
-    
     <?php include_javascripts() ?>
+    <?php if(has_slot('title')): ?>
+        <title><?php include_slot('title') ?></title>
+    <?php else: ?>
+        <title>Sistema de Gestão de Ordem de Serviço</title>
+    <?php endif; ?>
   </head>
   <body>
     <div id="container">
@@ -23,10 +26,16 @@
             TOPO
             <div id="header_menu" class=""><br/><br/>
                 <?php if ($sf_user->isAuthenticated()): ?>
-                    <?php if($sf_user->hasCredential("admin")):?> 
+
+                  <?php if ($sf_user->hasCredential('funcionario')): ?>
+
+                    <?php if($sf_user->hasCredential("admin")):?>
+
                         <?php echo link_to('Usuarios Sistema', 'sf_guard_user') ?> |
                         <?php echo link_to('Permissões', 'sf_guard_permission') ?> |
+
                     <?php endif; ?>
+
                     <?php echo link_to('Pais', 'pais') ?> |
                     <?php echo link_to('Estados', 'estado') ?> |
                     <?php echo link_to('Cidades', 'cidade') ?> |
@@ -35,6 +44,10 @@
                     <?php echo link_to('Clientes', 'cliente') ?> |
                     <?php echo link_to('Serviços', 'servico') ?> |
                     <?php echo link_to('Componentes', 'componente') ?> |
+                    <?php echo link_to('Solicitações', 'solicitacao') ?> |
+
+                  <?php endif; ?>
+
                     <?php echo link_to('Ordem Serviço', 'ordem_servico') ?> |
                     <?php echo link_to('Status', 'status') ?> |
                     <?php echo link_to('Sair', 'sf_guard_signout') ?>

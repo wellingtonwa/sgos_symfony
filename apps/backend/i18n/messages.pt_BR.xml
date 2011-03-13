@@ -11,6 +11,10 @@
         <source>results</source>
         <target>resultados</target>
       </trans-unit>
+      <trans-unit id="6">
+        <source>Signin</source>
+        <target>Logar</target>
+      </trans-unit>
       <trans-unit id="5">
         <source>[0] no result|[1] 1 result|(1,+Inf] %1% results</source>
         <target>[0] sem resultados|[1] 1 resultado|(1,+Inf] %1% resultados</target>

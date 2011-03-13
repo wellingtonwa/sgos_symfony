@@ -167,6 +167,15 @@ ComponenteOrdemServico:
       foreign: id
       foreignAlias: ComponentesOrdemServico
 
+Solicitacao:
+  actAs: {Timestampable: ~}
+  columns:
+    nome: { type: string(100), notnull: true }
+    email: { type: string(100), notnull: true }
+    telefone1: {type: string(14), notnull: true }
+    telefone2: { type: string(14) }
+    descricao_problema: { type: string(500), notnull: true }
+
 Status:
   actAs: [Timestampable]
   columns:

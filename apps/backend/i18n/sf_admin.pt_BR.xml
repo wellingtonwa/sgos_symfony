@@ -109,6 +109,10 @@
         <target>Item adicionado com sucesso.</target>
       </trans-unit>
       <trans-unit>
+        <source>Signin</source>
+        <target>Logar</target>
+      </trans-unit>
+      <trans-unit>
         <source>The item was updated successfully.</source>
         <target>Item atualizado com sucesso.</target>
       </trans-unit>
