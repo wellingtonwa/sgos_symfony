@@ -12,7 +12,7 @@ abstract class BaseOrdemServicoGeneratorConfiguration extends sfModelGeneratorCo
 {
   public function getActionsDefault()
   {
-    return array();
+    return array(  '_save:{ credentials' => 'admi }',);
   }
 
   public function getFormActions()
@@ -102,6 +102,7 @@ abstract class BaseOrdemServicoGeneratorConfiguration extends sfModelGeneratorCo
       'idCliente' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'ForeignKey',  'label' => 'Cliente',),
       'idEquipamento' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',),
       'status' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Enum',  'label' => 'Status',),
+      'descricao_problema' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',),
       'created_at' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Date',  'label' => 'Criado em',),
       'updated_at' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Date',),
       'servicos_list' => array(  'is_link' => false,  'is_real' => false,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',),
@@ -117,6 +118,7 @@ abstract class BaseOrdemServicoGeneratorConfiguration extends sfModelGeneratorCo
       'idCliente' => array(),
       'idEquipamento' => array(),
       'status' => array(),
+      'descricao_problema' => array(),
       'created_at' => array(),
       'updated_at' => array(),
       'servicos_list' => array(),
@@ -131,6 +133,7 @@ abstract class BaseOrdemServicoGeneratorConfiguration extends sfModelGeneratorCo
       'idCliente' => array(),
       'idEquipamento' => array(),
       'status' => array(),
+      'descricao_problema' => array(),
       'created_at' => array(),
       'updated_at' => array(),
       'servicos_list' => array(),
@@ -145,6 +148,7 @@ abstract class BaseOrdemServicoGeneratorConfiguration extends sfModelGeneratorCo
       'idCliente' => array(),
       'idEquipamento' => array(),
       'status' => array(),
+      'descricao_problema' => array(),
       'created_at' => array(),
       'updated_at' => array(),
       'servicos_list' => array(),
@@ -159,6 +163,7 @@ abstract class BaseOrdemServicoGeneratorConfiguration extends sfModelGeneratorCo
       'idCliente' => array(),
       'idEquipamento' => array(),
       'status' => array(),
+      'descricao_problema' => array(),
       'created_at' => array(),
       'updated_at' => array(),
       'servicos_list' => array(),
@@ -173,6 +178,7 @@ abstract class BaseOrdemServicoGeneratorConfiguration extends sfModelGeneratorCo
       'idCliente' => array(),
       'idEquipamento' => array(),
       'status' => array(),
+      'descricao_problema' => array(),
       'created_at' => array(),
       'updated_at' => array(),
       'servicos_list' => array(),

@@ -169,8 +169,14 @@ ordemServico_pesquisaComponente:
 
 # Rotas para as solicitações feitas pelo site
 solicitacao_newOS:
-  url: /solicitacao/newOS
-  param: { module: solicitacao, action: newOS}
+  url:      /solicitacao/newOS/:id
+  class:    sfDoctrineRoute
+  options:  { model: Solicitacao, type: object }
+  param:    { module: solicitacao, action: newOS}
+  requirements:
+    id: \d+
+    sf_method: [post]
+
 
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing

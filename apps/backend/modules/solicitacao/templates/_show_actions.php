@@ -1,1 +1,1 @@
-<?php echo url_for('Abrir OS com esta solicitação', 'solicitacao_newOS') ?>
+<?php echo link_to2("Abrir uma OS com esta solicitação", "solicitacao_newOS", $solicitacao, array('class'=>'ui-state-default ui-corner-all')) ?>

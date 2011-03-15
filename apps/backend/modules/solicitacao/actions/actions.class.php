@@ -20,9 +20,21 @@ class solicitacaoActions extends autoSolicitacaoActions
 
     }
 
+    public function  executeEdit(sfWebRequest $request) {
+
+        $this->forward('solicitacao', 'show');
+
+    }
+
     public function executeNewOS(sfWebRequest $request){
 
-        
+        $parametros = array_keys($this->getRoute()->getParameters());
+
+        $this->solicitacao = Doctrine::getTable('solicitacao')->findById($parametros[2])->getFirst();
+
+        $this->ordemServico = new OrdemServico();
+
+        $this->cliente = Doctrine::getTable('cliente')->findByEmail($this->solicitacao->getEmail())->getFirst();
 
     }
 
