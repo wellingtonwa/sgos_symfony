@@ -18,6 +18,12 @@ class solicitacaoActions extends autoSolicitacaoActions
 
         $this->solicitacao = $this->getRoute()->getObject();
 
+        $this->ordemServico = new OrdemServico();
+
+        if($this->solicitacao->getIdOrdemServico()){
+            $this->ordemServico = $this->solicitacao->getOrdemServico();
+        }
+
     }
 
     public function  executeEdit(sfWebRequest $request) {
@@ -33,6 +39,11 @@ class solicitacaoActions extends autoSolicitacaoActions
         $this->solicitacao = Doctrine::getTable('solicitacao')->findById($parametros[2])->getFirst();
 
         $this->ordemServico = new OrdemServico();
+
+        if($this->solicitacao->getIdOrdemServico()){
+            $this->ordemServico = $this->solicitacao->getOrdemServico();
+        }
+
 
         $this->cliente = Doctrine::getTable('cliente')->findByEmail($this->solicitacao->getEmail())->getFirst();
 

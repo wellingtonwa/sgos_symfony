@@ -3,4 +3,4 @@
 <strong>E-mail: </strong><?php echo $solicitacao->getEmail() ?><br/><br/>
 <strong>Descrição do problema: </strong><?php echo $solicitacao->getDescricaoProblema(); ?>
 <br/><br/>
-<?php include_partial('show_actions', array('solicitacao'=>$solicitacao)); ?>
+<?php include_partial('show_actions', array('solicitacao'=>$solicitacao, 'ordemServico'=>$ordemServico)); ?>

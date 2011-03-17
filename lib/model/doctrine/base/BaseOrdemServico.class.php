@@ -13,6 +13,7 @@
  * @property Equipamento $Equipamento
  * @property Doctrine_Collection $Servicos
  * @property Doctrine_Collection $Componentes
+ * @property Solicitacao $Solicitacao
  * @property Doctrine_Collection $ServicosOrdemServico
  * @property Doctrine_Collection $ComponentesOrdemServico
  * 
@@ -24,6 +25,7 @@
  * @method Equipamento         getEquipamento()             Returns the current record's "Equipamento" value
  * @method Doctrine_Collection getServicos()                Returns the current record's "Servicos" collection
  * @method Doctrine_Collection getComponentes()             Returns the current record's "Componentes" collection
+ * @method Solicitacao         getSolicitacao()             Returns the current record's "Solicitacao" value
  * @method Doctrine_Collection getServicosOrdemServico()    Returns the current record's "ServicosOrdemServico" collection
  * @method Doctrine_Collection getComponentesOrdemServico() Returns the current record's "ComponentesOrdemServico" collection
  * @method OrdemServico        setIdCliente()               Sets the current record's "idCliente" value
@@ -34,6 +36,7 @@
  * @method OrdemServico        setEquipamento()             Sets the current record's "Equipamento" value
  * @method OrdemServico        setServicos()                Sets the current record's "Servicos" collection
  * @method OrdemServico        setComponentes()             Sets the current record's "Componentes" collection
+ * @method OrdemServico        setSolicitacao()             Sets the current record's "Solicitacao" value
  * @method OrdemServico        setServicosOrdemServico()    Sets the current record's "ServicosOrdemServico" collection
  * @method OrdemServico        setComponentesOrdemServico() Sets the current record's "ComponentesOrdemServico" collection
  * 
@@ -91,6 +94,10 @@ abstract class BaseOrdemServico extends sfDoctrineRecord
              'refClass' => 'ComponenteOrdemServico',
              'local' => 'id',
              'foreign' => 'idComponente'));
+
+        $this->hasOne('Solicitacao', array(
+             'local' => 'id',
+             'foreign' => 'idOrdemServico'));
 
         $this->hasMany('ServicoOrdemServico as ServicosOrdemServico', array(
              'local' => 'id',

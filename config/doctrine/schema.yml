@@ -136,6 +136,10 @@ OrdemServico:
       foreignAlias: ComponentesOrdem
       class: Componente
       refClass: ComponenteOrdemServico
+    Solicitacao:
+      local: id
+      foreign: idOrdemServico
+      foreignAlias: OrdemServicoSolicitacao
 
 ServicoOrdemServico:
   columns:
@@ -175,6 +179,12 @@ Solicitacao:
     telefone1: {type: string(14), notnull: true }
     telefone2: { type: string(14) }
     descricao_problema: { type: string(500), notnull: true }
+    idOrdemServico: { type: integer}
+  relations:
+    OrdemServico:
+      local: idOrdemServico
+      foreign: id
+      foreignAlias: SolicitacaoOrdemServico
 
 Status:
   actAs: [Timestampable]

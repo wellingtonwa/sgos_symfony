@@ -104,6 +104,7 @@ abstract class BaseSolicitacaoGeneratorConfiguration extends sfModelGeneratorCon
       'telefone1' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',  'label' => 'Telefone Residencial',),
       'telefone2' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',  'label' => 'Telefone Celular',),
       'descricao_problema' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',),
+      'idOrdemServico' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'ForeignKey',),
       'created_at' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Date',  'label' => 'Criado em',),
       'updated_at' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Date',  'label' => 'Altualizado em',),
     );
@@ -118,6 +119,7 @@ abstract class BaseSolicitacaoGeneratorConfiguration extends sfModelGeneratorCon
       'telefone1' => array(),
       'telefone2' => array(),
       'descricao_problema' => array(),
+      'idOrdemServico' => array(),
       'created_at' => array(),
       'updated_at' => array(),
     );
@@ -132,6 +134,7 @@ abstract class BaseSolicitacaoGeneratorConfiguration extends sfModelGeneratorCon
       'telefone1' => array(),
       'telefone2' => array(),
       'descricao_problema' => array(),
+      'idOrdemServico' => array(),
       'created_at' => array(),
       'updated_at' => array(),
     );
@@ -146,6 +149,7 @@ abstract class BaseSolicitacaoGeneratorConfiguration extends sfModelGeneratorCon
       'telefone1' => array(),
       'telefone2' => array(),
       'descricao_problema' => array(),
+      'idOrdemServico' => array(),
       'created_at' => array(),
       'updated_at' => array(),
     );
@@ -160,6 +164,7 @@ abstract class BaseSolicitacaoGeneratorConfiguration extends sfModelGeneratorCon
       'telefone1' => array(),
       'telefone2' => array(),
       'descricao_problema' => array(),
+      'idOrdemServico' => array(),
       'created_at' => array(),
       'updated_at' => array(),
     );
@@ -174,6 +179,7 @@ abstract class BaseSolicitacaoGeneratorConfiguration extends sfModelGeneratorCon
       'telefone1' => array(),
       'telefone2' => array(),
       'descricao_problema' => array(),
+      'idOrdemServico' => array(),
       'created_at' => array(),
       'updated_at' => array(),
     );
