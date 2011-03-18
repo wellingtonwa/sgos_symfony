@@ -18,6 +18,24 @@ class ordemServicoActions extends autoOrdemServicoActions
         parent::preExecute();
     }
 
+    public function  executeDelete(sfWebRequest $request) {
+        $this->ordem_servico = $this->getRoute()->getObject();
+        $this->solicitacao = $this->ordem_servico->getSolicitacao();
+
+        try{
+           $this->solicitacao->setIdOrdemServico(NULL);
+           $this->solicitacao->save();
+        }
+        catch (Doctrine_Record_Exception $e){
+
+            return sfView::ERROR;
+
+        }
+
+
+        parent::executeDelete($request);
+    }
+
     // Para adicionar abrir o formul�rio de nova Ordem de Servi�o
     public function executeNew(sfWebRequest $request){
 

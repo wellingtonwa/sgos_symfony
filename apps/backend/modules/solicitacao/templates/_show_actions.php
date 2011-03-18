@@ -1,6 +1,10 @@
 <?php if(!$solicitacao->getIdOrdemServico()): ?>
-    <?php echo link_to2("Abrir uma OS com esta solicitação", "solicitacao_newOS", $solicitacao, array('class'=>'ui-state-default ui-corner-all')) ?>
+    <a href="<?php echo url_for("solicitacao_newOS", $solicitacao) ?>" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"><span class='ui-button-text'>Abrir uma OS com esta solicitação</span></a>
 <?php else: ?>
-    <?php echo link_to("Abrir a OS desta solicitação", "ordem_servico_edit", $ordemServico, array('class'=>'ui-state-default ui-corner-all')) ?>
+    <a href="<?php echo url_for("ordem_servico_edit", $ordemServico) ?>" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"><span class='ui-button-text'>Abrir a OS desta solicitação</span></a>
 <?php endif; ?>
-&nbsp;&nbsp; | &nbsp;&nbsp;<?php echo link_to("Voltar", "solicitacao", array('class'=>'ui-state-default ui-corner-all'));
+<a href="<?php echo url_for('solicitacao'); ?>" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+    <span class="ui-button-text">
+       Voltar
+    </span>
+</a>
