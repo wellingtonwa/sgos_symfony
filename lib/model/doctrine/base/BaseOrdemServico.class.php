@@ -16,6 +16,7 @@
  * @property Solicitacao $Solicitacao
  * @property Doctrine_Collection $ServicosOrdemServico
  * @property Doctrine_Collection $ComponentesOrdemServico
+ * @property Doctrine_Collection $OrdemServico
  * 
  * @method integer             getIdCliente()               Returns the current record's "idCliente" value
  * @method integer             getIdEquipamento()           Returns the current record's "idEquipamento" value
@@ -28,6 +29,7 @@
  * @method Solicitacao         getSolicitacao()             Returns the current record's "Solicitacao" value
  * @method Doctrine_Collection getServicosOrdemServico()    Returns the current record's "ServicosOrdemServico" collection
  * @method Doctrine_Collection getComponentesOrdemServico() Returns the current record's "ComponentesOrdemServico" collection
+ * @method Doctrine_Collection getOrdemServico()            Returns the current record's "OrdemServico" collection
  * @method OrdemServico        setIdCliente()               Sets the current record's "idCliente" value
  * @method OrdemServico        setIdEquipamento()           Sets the current record's "idEquipamento" value
  * @method OrdemServico        setStatus()                  Sets the current record's "status" value
@@ -39,6 +41,7 @@
  * @method OrdemServico        setSolicitacao()             Sets the current record's "Solicitacao" value
  * @method OrdemServico        setServicosOrdemServico()    Sets the current record's "ServicosOrdemServico" collection
  * @method OrdemServico        setComponentesOrdemServico() Sets the current record's "ComponentesOrdemServico" collection
+ * @method OrdemServico        setOrdemServico()            Sets the current record's "OrdemServico" collection
  * 
  * @package    sgos
  * @subpackage model
@@ -104,6 +107,10 @@ abstract class BaseOrdemServico extends sfDoctrineRecord
              'foreign' => 'idOrdemServico'));
 
         $this->hasMany('ComponenteOrdemServico as ComponentesOrdemServico', array(
+             'local' => 'id',
+             'foreign' => 'idOrdemServico'));
+
+        $this->hasMany('ObservacaoOrdemServico as OrdemServico', array(
              'local' => 'id',
              'foreign' => 'idOrdemServico'));
 

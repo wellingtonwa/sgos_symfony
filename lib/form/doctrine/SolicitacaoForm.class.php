@@ -8,7 +8,8 @@ class SolicitacaoForm extends BaseSolicitacaoForm{
 
         unset(
             $this['created_at'],
-            $this['updated_at']
+            $this['updated_at'],
+            $this['idOrdemServico']
                 );
 
         $this->widgetSchema['email']->setOption('label', 'E-mail');

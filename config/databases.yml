@@ -1,10 +1,20 @@
-# You can find more information about this file on the symfony website:
-# http://www.symfony-project.org/reference/1_4/en/07-Databases
-
 all:
   doctrine:
     class: sfDoctrineDatabase
     param:
-      dsn:      mysql:host=localhost;dbname=sgos
+      dsn: 'mysql:host=localhost;dbname=sgos'
       username: root
-      password: 
+      password: null
+prod:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn: 'mysql:host=localhost;dbname=sgos_sgos'
+      password: ik6yh651
+      username: sgos
+      
+
+
+#dsn: 'mysql:host=localhost;dbname=sgos'
+#username: root
+#password: null

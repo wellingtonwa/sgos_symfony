@@ -140,6 +140,11 @@ OrdemServico:
       local: id
       foreign: idOrdemServico
       foreignAlias: OrdemServicoSolicitacao
+    Observacao:
+      local: id
+      foreign: idOrdemServico
+      foreignAlias: Observacoes
+      refClass: OrdemServicoObservacao
 
 ServicoOrdemServico:
   columns:
@@ -170,6 +175,22 @@ ComponenteOrdemServico:
       local: idComponente
       foreign: id
       foreignAlias: ComponentesOrdemServico
+
+ObservacaoOrdemServico:
+  actAs: {Timestampable: ~}
+  columns:
+    idUsuario: {type: integer, notnull: true}
+    observacao: {type: string(4000), notnull: true}
+    idOrdemServico: {type: integer, notnull: true}
+  relations:
+    OrdemServico:
+      local: idOrdemServico
+      foreign: id
+      foreignAlias: OrdemServico
+    sfGuardUser:
+      local: idUsuario
+      foreign: id
+      foreignAlias: Usuario
 
 Solicitacao:
   actAs: {Timestampable: ~}

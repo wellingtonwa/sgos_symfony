@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <?php use_javascript('jquery-1.4.2.min.js'); ?>
     <?php use_stylesheet('resets.css') ?>
-    <?php use_stylesheet('jquery-ui-1.8.2.custom.css') ?>
+    <?php use_stylesheet('jquery-ui-1.8.10.custom.css') ?>
     <?php use_stylesheet('template.css') ?>
     <?php include_stylesheets() ?>
 

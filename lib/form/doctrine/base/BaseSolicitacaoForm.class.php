@@ -21,6 +21,7 @@ abstract class BaseSolicitacaoForm extends BaseFormDoctrine
       'telefone1'          => new sfWidgetFormInputText(),
       'telefone2'          => new sfWidgetFormInputText(),
       'descricao_problema' => new sfWidgetFormTextarea(),
+      'idOrdemServico'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('OrdemServico'), 'add_empty' => true)),
       'created_at'         => new sfWidgetFormDateTime(),
       'updated_at'         => new sfWidgetFormDateTime(),
     ));
@@ -32,6 +33,7 @@ abstract class BaseSolicitacaoForm extends BaseFormDoctrine
       'telefone1'          => new sfValidatorString(array('max_length' => 14)),
       'telefone2'          => new sfValidatorString(array('max_length' => 14, 'required' => false)),
       'descricao_problema' => new sfValidatorString(array('max_length' => 500)),
+      'idOrdemServico'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('OrdemServico'), 'required' => false)),
       'created_at'         => new sfValidatorDateTime(),
       'updated_at'         => new sfValidatorDateTime(),
     ));

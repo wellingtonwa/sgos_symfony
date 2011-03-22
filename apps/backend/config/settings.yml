@@ -40,7 +40,7 @@ all:
     i18n: true
     # Setando o idioma padrão
     default_culture: pt_BR
-    enabled_modules: [default, sfGuardAuth, sfGuardUser, sfGuardPermission]
+    enabled_modules: [default, sfGuardAuth, sfGuardUser, sfGuardPermission, sfGuardGroup]
     # Form security secret (CSRF protection)
     csrf_secret:            f2409e9fdded11c0d68e3623e8fbd1b5c659f3e9
     # Output escaping settings

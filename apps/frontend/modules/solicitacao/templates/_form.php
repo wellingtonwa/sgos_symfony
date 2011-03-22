@@ -9,8 +9,8 @@
     <tfoot>
       <tr>
         <td colspan="2">
-          <input type="submit" value="Enviar" />
-          &nbsp;<a href="<?php echo url_for('') ?>">Voltar para home</a>
+          <input type="submit" value="Enviar" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"/>
+          &nbsp;<a href="<?php echo url_for('') ?>" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"><span class='ui-button-text'>Voltar para home</span></a>
         </td>
       </tr>
     </tfoot>
