@@ -1,0 +1,16 @@
+* { 
+	font-family:  "Lucida Sans Unicode","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+	padding: 0px; 
+}
+
+
+* html .clearfix {height: 1%;}
+
+
+* {	outline: none; }
+object { outline: none; }
+
+* .loading{
+ outline:none;	
+ border:none !important;
+}

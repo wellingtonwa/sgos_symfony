@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd" >
+<xliff version="1.0">
+  <file original="global" source-language="pt_BR" datatype="plaintext">
+    <body>
+      <trans-unit id="3">
+        <source>page</source>
+        <target>página</target>
+      </trans-unit>
+      <trans-unit id="4">
+        <source>results</source>
+        <target>resultados</target>
+      </trans-unit>
+      <trans-unit id="6">
+        <source>Signin</source>
+        <target>Logar</target>
+      </trans-unit>
+      <trans-unit id="5">
+        <source>[0] no result|[1] 1 result|(1,+Inf] %1% results</source>
+        <target>[0] sem resultados|[1] 1 resultado|(1,+Inf] %1% resultados</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,253 @@
+Cidade:
+  Cidade_1:
+    nome: 'Juiz de Fora'
+    idEstado: '1'
+    created_at: '2011-02-18 17:34:00'
+    updated_at: '0000-00-00 00:00:00'
+  Cidade_2:
+    nome: Barbacena
+    idEstado: '1'
+    created_at: '2011-02-18 17:34:00'
+    updated_at: '0000-00-00 00:00:00'
+  Cidade_3:
+    nome: 'Matias Barbosa'
+    idEstado: '1'
+    created_at: '2011-02-18 17:34:00'
+    updated_at: '0000-00-00 00:00:00'
+  Cidade_4:
+    nome: 'Santos Dumont'
+    idEstado: '1'
+    created_at: '2011-02-18 17:34:00'
+    updated_at: '0000-00-00 00:00:00'
+  Cidade_5:
+    nome: 'Astolfo Dutra'
+    idEstado: '1'
+    created_at: '2011-02-18 17:34:00'
+    updated_at: '0000-00-00 00:00:00'
+  Cidade_6:
+    nome: 'Belmiro Braga'
+    idEstado: '1'
+    created_at: '2011-02-18 17:34:00'
+    updated_at: '0000-00-00 00:00:00'
+  Cidade_7:
+    nome: 'Belo Horizonte'
+    idEstado: '1'
+    created_at: '2011-02-18 17:34:00'
+    updated_at: '0000-00-00 00:00:00'
+  Cidade_8:
+    nome: Contagem
+    idEstado: '1'
+    created_at: '2011-02-18 17:34:00'
+    updated_at: '0000-00-00 00:00:00'
+  Cidade_9:
+    nome: Ipatinga
+    idEstado: '1'
+    created_at: '2011-02-18 17:34:00'
+    updated_at: '0000-00-00 00:00:00'
+  Cidade_10:
+    nome: Leopoldina
+    idEstado: '1'
+    created_at: '2011-02-18 17:34:00'
+    updated_at: '0000-00-00 00:00:00'
+  Cidade_11:
+    nome: 'Além Paraíba'
+    idEstado: '1'
+    created_at: '2011-02-18 17:34:00'
+    updated_at: '0000-00-00 00:00:00'
+  Cidade_12:
+    nome: 'Alto Jequitiba'
+    idEstado: '1'
+    created_at: '2011-02-18 17:34:00'
+    updated_at: '0000-00-00 00:00:00'
+  Cidade_13:
+    nome: 'Alto Rio Doce'
+    idEstado: '1'
+    created_at: '2011-02-18 17:34:00'
+    updated_at: '0000-00-00 00:00:00'
+  Cidade_14:
+    nome: Aracitaba
+    idEstado: '1'
+    created_at: '2011-02-18 17:34:00'
+    updated_at: '0000-00-00 00:00:00'
+  Cidade_15:
+    nome: Alvarenga
+    idEstado: '1'
+    created_at: '2011-02-18 17:34:00'
+    updated_at: '0000-00-00 00:00:00'
+  Cidade_16:
+    nome: Andradas
+    idEstado: '1'
+    created_at: '2011-02-18 17:34:00'
+    updated_at: '0000-00-00 00:00:00'
+  Cidade_17:
+    nome: Alfenas
+    idEstado: '1'
+    created_at: '2011-02-18 17:34:00'
+    updated_at: '0000-00-00 00:00:00'
+  Cidade_18:
+    nome: Alagoas
+    idEstado: '1'
+    created_at: '2011-02-18 17:34:00'
+    updated_at: '0000-00-00 00:00:00'
+  Cidade_19:
+    nome: Alterosa
+    idEstado: '1'
+    created_at: '2011-02-18 17:34:00'
+    updated_at: '0000-00-00 00:00:00'
+  Cidade_20:
+    nome: 'Amparo de Minas'
+    idEstado: '1'
+    created_at: '2011-02-18 17:34:00'
+    updated_at: '0000-00-00 00:00:00'
+  Cidade_21:
+    nome: 'Alto Caparao'
+    idEstado: '1'
+    created_at: '2011-02-18 17:34:01'
+    updated_at: '0000-00-00 00:00:00'
+Cliente:
+  Cliente_1:
+    nome: 'Weber Wagner'
+    logradouro: 'José Lima Dias'
+    numero: '52'
+    complemento: ''
+    bairro: 'Santa Cecília'
+    idCidade: '1'
+    telefoneResidencial: '32 32138626'
+    telefoneComercial: '32 88555225'
+    email: weberwagner@gmail.com
+    created_at: '2011-02-18 17:34:01'
+    updated_at: '2010-09-20 11:33:21'
+  Cliente_2:
+    nome: 'Rafael Francelino'
+    logradouro: 'São João'
+    numero: '3589'
+    complemento: '304'
+    bairro: Centro
+    idCidade: '1'
+    telefoneResidencial: ''
+    telefoneComercial: '32 99371290'
+    email: faelfrancelino@gmail.com
+    created_at: '2011-02-18 17:34:01'
+    updated_at: '2010-09-20 11:34:33'
+Componente:
+  Componente_1:
+    nome: 'HD Samsung 320Gb'
+    descricao: Blablablablabla
+    preco: '175.00'
+    created_at: '2010-09-20 11:55:21'
+    updated_at: '2010-09-20 11:55:21'
+Equipamento:
+  Equipamento_1:
+    nome: Notebook
+    descricao: 'máquina principal do usuário'
+    idTipoEquipamento: '1'
+    idCliente: '2'
+    created_at: '2011-02-18 17:34:01'
+    updated_at: '0000-00-00 00:00:00'
+Estado:
+  Estado_1:
+    nome: 'Minas Gerais'
+    sigla: MG
+    idPais: '1'
+    created_at: '2011-02-18 17:34:00'
+    updated_at: '2010-09-20 11:32:03'
+OrdemServico:
+  OrdemServico_1:
+    idCliente: '2'
+    idEquipamento: '1'
+    status: 'Em execucao'
+    descricao_problema: 'O camagada reclamou do problema na ventuinha'
+    created_at: '0000-00-00 00:00:00'
+    updated_at: '2011-02-18 17:39:13'
+Pais:
+  Pais_1:
+    nome: Brasil
+    sigla: BRA
+    created_at: '2011-02-18 17:34:00'
+    updated_at: '2010-09-20 11:31:41'
+PrecoComponente:
+  PrecoComponente_1:
+    preco: '175.00'
+    dataInicio: '2011-02-18 17:34:01'
+    idComponente: '1'
+    created_at: '2011-02-18 17:34:01'
+    updated_at: '2011-02-18 17:34:01'
+  PrecoComponente_2:
+    preco: '175.00'
+    dataInicio: '2011-02-02 21:18:27'
+    idComponente: '1'
+    created_at: '2011-02-02 21:18:27'
+    updated_at: '2011-02-02 21:18:27'
+  PrecoComponente_3:
+    preco: '175.00'
+    dataInicio: '2010-10-19 20:43:17'
+    idComponente: '1'
+    created_at: '2010-10-19 20:43:17'
+    updated_at: '2010-10-19 20:43:17'
+  PrecoComponente_4:
+    preco: '175.00'
+    dataInicio: '2010-09-20 11:55:21'
+    idComponente: '1'
+    created_at: '2010-09-20 11:55:21'
+    updated_at: '2010-09-20 11:55:21'
+PrecoServico:
+  PrecoServico_1:
+    preco: '75.00'
+    dataInicio: '2010-09-20 11:37:58'
+    idServico: '1'
+    created_at: '2010-09-20 11:37:58'
+    updated_at: '2010-09-20 11:37:58'
+Servico:
+  Servico_1:
+    nome: 'Formatação (Sem Backup)'
+    descricao: 'Formatação Simples sem backup do usuário'
+    preco: '75.00'
+    created_at: '2010-09-20 11:37:58'
+    updated_at: '2010-09-20 11:37:58'
+  Servico_2:
+    nome: 'Limpeza de Desktop'
+    descricao: 'Limpeza realizada no interior do computador de mesa'
+    preco: '10.00'
+    created_at: '2010-10-13 13:04:44'
+    updated_at: '2010-10-13 13:04:44'
+  Servico_3:
+    nome: 'Limpeza de Notebook'
+    descricao: 'Limpeza realizada no interior do notebook.'
+    preco: '25.00'
+    created_at: '2010-10-13 13:05:36'
+    updated_at: '2010-10-13 13:05:36'
+  Servico_4:
+    nome: 'Formatação (Com Backup)'
+    descricao: 'Formatação com Backup dos dados do cliente.'
+    preco: '100.00'
+    created_at: '2010-10-13 13:06:27'
+    updated_at: '2010-10-13 13:06:27'
+ServicoOrdemServico:
+  ServicoOrdemServico_2:
+    idOrdemServico: '1'
+    idServico: '1'
+    quantidade: '1'
+  ServicoOrdemServico_3:
+    idOrdemServico: '1'
+    idServico: '3'
+    quantidade: '1'
+sfGuardUser:
+  sfGuardUser_1:
+    first_name: null
+    last_name: null
+    email_address: wellingtonwa@gmail.com
+    username: wellington
+    algorithm: sha1
+    salt: 40f7ce63a0369257d17a241a195dbfff
+    password: 42041ad2093613a1532bb5840ec614d451777d35
+    is_active: true
+    is_super_admin: false
+    last_login: '2011-02-07 17:29:55'
+    created_at: '2011-02-03 09:16:41'
+    updated_at: '2011-02-07 17:29:55'
+TipoEquipamento:
+  TipoEquipamento_1:
+    nome: NoteBook
+    descricao: 'Computador portátil'
+    created_at: '2011-02-18 17:34:00'
+    updated_at: '2010-09-20 11:36:05'

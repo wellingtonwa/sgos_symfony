@@ -1,0 +1,27 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Solicitacao
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          solicitacao
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        telefone1: {label: Telefone Residencial}
+        telefone2: {label: Telefone Celular}
+        created_at: {label: Criado em}
+        updated_at: {label: Altualizado em}
+      list:
+        display: [=nome, =telefone1, =telefone2, =descricao_problema]
+        
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~
