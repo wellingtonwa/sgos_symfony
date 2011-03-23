@@ -39,4 +39,8 @@
 </table>
 
 <hr />
-<a href="<?php echo url_for('') ?>">Voltar para página inicial</a>
+<a href="<?php echo url_for('') ?>" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+    <span class='ui-button-text'>
+        Voltar para página inicial
+    </span>
+</a>

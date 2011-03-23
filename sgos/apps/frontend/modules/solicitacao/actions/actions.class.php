@@ -20,7 +20,7 @@ class solicitacaoActions extends sfActions
 
   public function executeShow(sfWebRequest $request)
   {
-    $this->solicitacao = Doctrine::getTable('Solicitacao')->find(array($request->getParameter('id')));
+    $this->solicitacao = Doctrine::getTable('Solicitacao')->find($this->getUser()->getAttribute('frontend.solicitacao.show'));
     $this->forward404Unless($this->solicitacao);
   }
 
@@ -62,7 +62,7 @@ class solicitacaoActions extends sfActions
     $request->checkCSRFProtection();
 
     $this->forward404Unless($solicitacao = Doctrine::getTable('Solicitacao')->find(array($request->getParameter('id'))), sprintf('Object solicitacao does not exist (%s).', $request->getParameter('id')));
-    $solicitacao->delete();
+    //$solicitacao->delete();
 
     $this->redirect('solicitacao/index');
   }
@@ -75,9 +75,11 @@ class solicitacaoActions extends sfActions
     {
       $solicitacao = $form->save();
 
+      $this->getUser()->setAttribute('frontend.solicitacao.show', $solicitacao->getId());
+
       $this->getUser()->setFlash('notice', "Sua solicitação foi enviada. Por favor aguarde o retorno.");
 
-      $this->redirect('solicitacao/show?id='.$solicitacao->getId());
+      $this->redirect('@solicitacao_show');
     }
   }
 }

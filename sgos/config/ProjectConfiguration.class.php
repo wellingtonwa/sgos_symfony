@@ -10,7 +10,7 @@ class ProjectConfiguration extends sfProjectConfiguration
     $this->enablePlugins('sfDoctrinePlugin');
     $this->enablePlugins('sfDoctrineGuardPlugin');
     $this->setWebDir($this->getRootDir().'/public_htm/sgos');
-    //$this->setCacheDir($this->getRootDir().'/tmp/symfony_cache');
+    $this->setCacheDir($this->getRootDir().'/cache');
     //$this->setLogDir($this->getRootDir().'/tmp/symfony_logs');
     //$this->setWebDir($this->setRootDir($rootDir)."/public_html");
   }

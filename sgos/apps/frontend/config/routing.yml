@@ -18,6 +18,10 @@ solicitacao:
   # url:  /solicitacao
   # param: { module: solicitacao, action: index}
 
+solicitacao_show:
+  url: /solicitacao/show
+  param: { module: solicitacao, action: show}
+
 salvar_solicitacao:
   url: /solicitacao/enviar
   param: { module: solicitacao, action: enviarEmail}

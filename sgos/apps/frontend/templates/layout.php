@@ -24,9 +24,7 @@
             <div id="header_menu"><br/><br/>
                 <a href="<?php echo url_for("solicitacao/new") ?>">Enviar Solicitação</a>
                 |
-                <?php if(!$sf_user->isAuthenticated()): ?>
                 <a href="<?php echo $sf_context->getConfiguration()->generateFrontendUrl('ordem_servico') ?>">Área do Usuário</a>
-                <?php endif; ?>
             </div>
         </div>
         <div id="centro">

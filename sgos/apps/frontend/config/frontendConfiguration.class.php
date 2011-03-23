@@ -7,7 +7,12 @@ class frontendConfiguration extends sfApplicationConfiguration
 
   public function generateFrontendUrl($name, $parameters = array())
   {
-    return 'http://sgos.localhost/backend_dev.php'.$this->getBackendRouting()->generate($name, $parameters);
+      $link = "http://sgospen.localhost/backend_dev.php";
+      if (!in_array(@$_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1')))
+      {
+        $link = 'http://sgos.wellingtonwa.com/backend.php';
+      }
+        return $link.$this->getBackendRouting()->generate($name, $parameters);
   }
 
   public function getBackendRouting()

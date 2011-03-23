@@ -13,8 +13,12 @@
         <target>Senha</target>
       </trans-unit>
       <trans-unit>
+        <source>Signin Form</source>
+        <target>Formulário de Login</target>
+      </trans-unit>
+      <trans-unit>
         <source>Remember</source>
-        <target>lembra de mim</target>
+        <target>lembrar de mim</target>
       </trans-unit>
       <trans-unit>
         <source>Username or E-Mail</source>
