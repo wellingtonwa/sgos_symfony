@@ -1,0 +1,26 @@
+all:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn: 'mysql:host=localhost;dbname=sgos'
+      username: root
+      password: null
+prod:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn: 'mysql:host=localhost;dbname=sgos_sgos'
+      password: ik6yh651
+      username: sgos
+dev:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn: 'mysql:host=localhost;dbname=sgos'
+      username: root
+      password: null
+
+
+#dsn: 'mysql:host=localhost;dbname=sgos'
+#username: root
+#password: null
