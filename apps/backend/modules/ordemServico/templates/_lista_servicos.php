@@ -1,4 +1,9 @@
 <table width="100%">
+    <tr>
+        <td colspan="3" style="background: #8f8f8f">
+            Componentes Disponíveis
+        </td>
+    </tr>
     <tr style="background: #afafaf">
         <td>
             Nome

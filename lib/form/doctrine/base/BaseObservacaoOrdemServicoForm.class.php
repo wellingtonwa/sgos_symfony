@@ -16,9 +16,10 @@ abstract class BaseObservacaoOrdemServicoForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'             => new sfWidgetFormInputHidden(),
-      'idUsuario'      => new sfWidgetFormInputHidden(),
+      'idUsuario'      => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => false)),
       'observacao'     => new sfWidgetFormTextarea(),
-      'idOrdemServico' => new sfWidgetFormInputHidden(),
+      'idOrdemServico' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('OrdemServico'), 'add_empty' => false)),
+      'status'         => new sfWidgetFormInputText(),
       'created_at'     => new sfWidgetFormDateTime(),
       'updated_at'     => new sfWidgetFormDateTime(),
     ));
@@ -28,6 +29,7 @@ abstract class BaseObservacaoOrdemServicoForm extends BaseFormDoctrine
       'idUsuario'      => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'))),
       'observacao'     => new sfValidatorString(array('max_length' => 4000)),
       'idOrdemServico' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('OrdemServico'))),
+      'status'         => new sfValidatorString(array('max_length' => 100)),
       'created_at'     => new sfValidatorDateTime(),
       'updated_at'     => new sfValidatorDateTime(),
     ));

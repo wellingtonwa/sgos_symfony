@@ -1,4 +1,9 @@
 <script>
+    // Accordion
+    $(function() {
+        $("#accordion").accordion({ header: "h3" });
+    });
+
     $(document).ready(function(){
         $('#queryServico').keypress(function(e) {
             if(e.keyCode==13){
@@ -139,7 +144,9 @@
         <div style="clear: both;"></div>
     </div>
 
-    <?php include_partial('form_observacao', array('formObservacao'=>$formObservacao, 'ordem_servico'=>$ordem_servico)) ?>
+    <?php include_partial('form_observacao', array('form'=>$form, 'ordem_servico'=>$ordem_servico)) ?>
+
+    <?php include_partial('historico_observacao', array('observacoesOrdemServico'=>$observacoesOrdemServico)) ?>
 
 </div>
 

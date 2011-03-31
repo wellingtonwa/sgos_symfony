@@ -40,7 +40,6 @@ class ordemServicoActions extends autoOrdemServicoActions
     public function executeNew(sfWebRequest $request){
         parent::executeNew($request);
 
-        $this->formObservacao = new ObservacaoOrdemServicoForm();
         
         $this->clientes = Doctrine::getTable('Cliente')->findAll();
 
@@ -113,6 +112,10 @@ class ordemServicoActions extends autoOrdemServicoActions
 
         $this->getUser()->setAttribute("dadosServicosAdicionados", $dadosServicosAdicionados);
 
+        // Salvando na sessão o registro da Ordem de Serviço para futura
+        // comparações de alterações
+        $this->getUser()->setAttribute('ordem_servico', $this->ordem_servico);
+
         // Obtendos todos os componentes
         $this->dadosComponentes = Doctrine::getTable('Componente')->findAll();
         $componentePager = $this->getComponentePager();
@@ -134,14 +137,18 @@ class ordemServicoActions extends autoOrdemServicoActions
 
         $this->getUser()->setAttribute("dadosComponentesAdicionados", $dadosComponentesAdicionados);
 
-        $this->dadosForm = array('dadosServicos'=>$this->dadosServicos,
-                                    'servicoPager'=>$servicoPager,
-                                    'dadosEquipamentos'=>$this->dadosEquipamentos,
-                                    'dadosComponentes'=>$this->dadosComponentes,
-                                    'componentePager'=>$componentePager,
-                                    'clientes'=>$this->clientes,
-                                    'dadosServicosAdicionados'=>$this->getUser()->getAttribute('dadosServicosAdicionados'),
-                                    'dadosComponentesAdicionados'=>$this->getUser()->getAttribute('dadosComponentesAdicionados')
+        // Obtendo as observações da ordem de servico
+        $observacoes = Doctrine::getTable('ObservacaoOrdemServico')->findByOrdemServico($this->ordem_servico->getId());
+
+        $this->dadosForm = array('dadosServicos'=>$this->dadosServicos
+                                    , 'servicoPager'=>$servicoPager
+                                    , 'dadosEquipamentos'=>$this->dadosEquipamentos
+                                    , 'dadosComponentes'=>$this->dadosComponentes
+                                    , 'componentePager'=>$componentePager
+                                    , 'clientes'=>$this->clientes
+                                    , 'dadosServicosAdicionados'=>$this->getUser()->getAttribute('dadosServicosAdicionados')
+                                    , 'dadosComponentesAdicionados'=>$this->getUser()->getAttribute('dadosComponentesAdicionados')
+                                    , 'observacoesOrdemServico'=>$observacoes
                                     );
 
         $this->form = $this->configuration->getForm($this->ordem_servico);
