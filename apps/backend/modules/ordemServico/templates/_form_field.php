@@ -145,9 +145,8 @@
     </div>
 
     <?php include_partial('form_observacao', array('form'=>$form, 'ordem_servico'=>$ordem_servico)) ?>
-
+    
     <?php include_partial('historico_observacao', array('observacoesOrdemServico'=>$observacoesOrdemServico)) ?>
-
 </div>
 
 

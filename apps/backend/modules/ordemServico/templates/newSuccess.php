@@ -11,7 +11,7 @@
   </div>
 
   <div id="sf_admin_content">
-    <?php include_partial('ordemServico/form', array('ordem_servico' => $ordem_servico, 'form' => $form, 'configuration' => $configuration, 'helper' => $helper, 'dadosForm'=>$dadosForm)) ?>
+    <?php include_partial('ordemServico/form', array('ordem_servico' => $ordem_servico, 'form' => $form, 'configuration' => $configuration, 'helper' => $helper, 'dadosForm'=>$dadosForm, 'formObservacao'=>$formObservacao)) ?>
   </div>
 
   <div id="sf_admin_footer">

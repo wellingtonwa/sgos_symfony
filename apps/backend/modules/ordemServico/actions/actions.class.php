@@ -40,7 +40,8 @@ class ordemServicoActions extends autoOrdemServicoActions
     public function executeNew(sfWebRequest $request){
         parent::executeNew($request);
 
-        
+        $this->formObservacao = new ObservacaoOrdemServicoForm();
+
         $this->clientes = Doctrine::getTable('Cliente')->findAll();
 
         if(count($this->clientes)>0)
@@ -64,18 +65,18 @@ class ordemServicoActions extends autoOrdemServicoActions
         $this->setPageComponente(1);
 
 
-        $this->dadosForm = array('dadosServicos'=>$this->dadosServicos,
-                                    'servicoPager'=>$servicoPager,
-                                    'dadosEquipamentos'=>$this->dadosEquipamentos,
-                                    'dadosComponentes'=>$this->dadosComponentes,
-                                    'componentePager'=>$componentePager,
-                                    'clientes'=>$this->clientes,
-                                    'dadosServicosAdicionados'=>$this->getUser()->getAttribute('dadosServicosAdicionados'),
-                                    'dadosComponentesAdicionados'=>$this->getUser()->getAttribute('dadosComponentesAdicionados'),
+        $this->dadosForm = array('dadosServicos'=>$this->dadosServicos
+                                    , 'servicoPager'=>$servicoPager
+                                    , 'dadosEquipamentos'=>$this->dadosEquipamentos
+                                    , 'dadosComponentes'=>$this->dadosComponentes
+                                    , 'componentePager'=>$componentePager
+                                    , 'clientes'=>$this->clientes
+                                    , 'dadosServicosAdicionados'=>$this->getUser()->getAttribute('dadosServicosAdicionados')
+                                    , 'dadosComponentesAdicionados'=>$this->getUser()->getAttribute('dadosComponentesAdicionados')
+                                    , 'observacoesOrdemServico'=>null
                                     );
 
 
-        
     }
 
 
@@ -112,9 +113,11 @@ class ordemServicoActions extends autoOrdemServicoActions
 
         $this->getUser()->setAttribute("dadosServicosAdicionados", $dadosServicosAdicionados);
 
-        // Salvando na sessão o registro da Ordem de Serviço para futura
+        // Salvando na sessão o registro da Ordem de Serviço para futuras
         // comparações de alterações
         $this->getUser()->setAttribute('ordem_servico', $this->ordem_servico);
+        $this->getUser()->setAttribute('ordem_servico_servicos', $this->ordem_servico->getServicosOrdemServico());
+        $this->getUser()->setAttribute('ordem_servico_compenentes', $this->ordem_servico->getComponentesOrdemServico());
 
         // Obtendos todos os componentes
         $this->dadosComponentes = Doctrine::getTable('Componente')->findAll();
@@ -185,10 +188,10 @@ class ordemServicoActions extends autoOrdemServicoActions
 
       
       // Verificando os Serviços adicionados na ordem de serviço
-      $dadosServicosAsicionados = $this->getUser()->getAttribute('dadosServicosAdicionados');
+      $dadosServicosAdicionados = $this->getUser()->getAttribute('dadosServicosAdicionados');
 
-      if($dadosServicosAsicionados){
-          foreach($dadosServicosAsicionados as $servicoAdicionado){
+      if($dadosServicosAdicionados){
+          foreach($dadosServicosAdicionados as $servicoAdicionado){
 
               if($servicoAdicionado['registro']){
                   $servicoOrdemServico = $servicoAdicionado['registro'];
@@ -204,6 +207,12 @@ class ordemServicoActions extends autoOrdemServicoActions
               else
                 $servicoOrdemServico->delete();
           }
+      }
+      else{
+          $servicosOrdemServico = Doctrine::getTable('ServicoOrdemServico')->findBy('idordemservico', $ordem_servico->getId());
+          if($servicosOrdemServico->count()>0)
+            foreach($servicosOrdemServico as $servicoOrdemServico)
+                $servicoOrdemServico->delete();
       }
 
       // Verificando os Componentes adicionados na ordem de serviço
@@ -233,8 +242,14 @@ class ordemServicoActions extends autoOrdemServicoActions
 
           //$observacaoAction = new observacaoOrdemServicoActions();
           //$observacaoAction->salvarObservacao($request, $form);
-          
-      }      
+      }
+      else{
+           $componentesOrdemServico = Doctrine::getTable('ComponenteOrdemServico')->findBy('idordemservico', $ordem_servico->getId());
+           if($componentesOrdemServico->count()>0)
+               foreach($componentesOrdemServico as $componenteOrdemServico)
+                    $componenteOrdemServico->delete();
+           
+      }
 
       $this->dispatcher->notify(new sfEvent($this, 'admin.save_object', array('object' => $ordem_servico)));
 
