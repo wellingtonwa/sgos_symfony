@@ -24,39 +24,42 @@
     <div id="content">
         <div id="header">
             TOPO
-            <div id="header_menu" class=""><br/><br/>
-                <?php if ($sf_user->isAuthenticated()): ?>
+        </div>
+        <div id="menu_lateral"><br/><br/>
 
-                  <?php if ($sf_user->hasCredential('funcionario')): ?>
+            <?php if ($sf_user->isAuthenticated()): ?>
+                <ul class="menu">
+                    <?php if ($sf_user->hasCredential('funcionario')): ?>
 
-                    <?php if($sf_user->hasCredential("admin")):?>
+                        <?php if($sf_user->hasCredential("admin")):?>
 
-                        <?php echo link_to('Usuarios Sistema', 'sf_guard_user') ?> |
-                        <?php echo link_to('Permissões', 'sf_guard_permission') ?> |
+                            <li><?php echo link_to('Usuarios Sistema', 'sf_guard_user') ?></li>
+                            <li><?php echo link_to('Permissões', 'sf_guard_permission') ?></li>
+
+                        <?php endif; ?>
+
+                        <li><?php echo link_to('Pais', 'pais') ?></li>
+                        <li><?php echo link_to('Estados', 'estado') ?></li>
+                        <li><?php echo link_to('Cidades', 'cidade') ?></li>
+                        <li><?php echo link_to('Equipamento', 'equipamento') ?></li>
+                        <li><?php echo link_to('Tipo de Equipamento', 'tipo_equipamento') ?></li>
+                        <li><?php echo link_to('Clientes', 'cliente') ?></li>
+                        <li><?php echo link_to('Serviços', 'servico') ?></li>
+                        <li><?php echo link_to('Componentes', 'componente') ?></li>
+                        <li><?php echo link_to('Solicitações', 'solicitacao') ?></li>
 
                     <?php endif; ?>
-
-                    <?php echo link_to('Pais', 'pais') ?> |
-                    <?php echo link_to('Estados', 'estado') ?> |
-                    <?php echo link_to('Cidades', 'cidade') ?> |
-                    <?php echo link_to('Equipamento', 'equipamento') ?> |
-                    <?php echo link_to('Tipo de Equipamento', 'tipo_equipamento') ?> |
-                    <?php echo link_to('Clientes', 'cliente') ?> |
-                    <?php echo link_to('Serviços', 'servico') ?> |
-                    <?php echo link_to('Componentes', 'componente') ?> |
-                    <?php echo link_to('Solicitações', 'solicitacao') ?> |
-
-                  <?php endif; ?>
-
-                    <?php echo link_to('Ordem Serviço', 'ordem_servico') ?> |
-                    <?php echo link_to('Status', 'status') ?> |
-                    <?php echo link_to('Sair', 'sf_guard_signout') ?>
-                <?php endif; ?>
-            </div>
+                
+                    <li><?php echo link_to('Ordem Serviço', 'ordem_servico') ?></li>
+                    <li><?php echo link_to('Status', 'status') ?></li>
+                    <li><?php echo link_to('Sair', 'sf_guard_signout') ?></li>
+                </ul>
+            <?php endif; ?>
         </div>
         <div id="centro">
             <?php echo $sf_content ?>
         </div>
+        <div class="clear1"></div>
         <br/><br/>
         <div id="footer">
            RODAPE
