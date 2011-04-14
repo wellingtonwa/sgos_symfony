@@ -267,6 +267,12 @@ a.linkCadastro{
     overflow:hidden;
 }
 
+.bbp{
+    background:url("../images/frame_main_2.png") repeat scroll 0 0 transparent;
+    height: 4px;
+    top: inherit;
+}
+
 .bbl{
     overflow:hidden;
     float:left;
@@ -316,5 +322,11 @@ a.linkCadastro{
 
 #centro{
     float: left;
-    width: 85%;
+    width: 100%;
+    background-color: #cccccc;
+}
+
+#conteudo{
+    
+    padding: 15px;
 }

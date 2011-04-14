@@ -56,8 +56,16 @@
                 </ul>
             <?php endif; ?>
         </div>
-        <div id="centro">
-            <?php echo $sf_content ?>
+        <div style="overflow: hidden; width: 85%">
+            <div class="btl"></div><div class="btr"></div><div class="btp"></div>
+                <div id="centro">
+                    <div id="conteudo">
+                        <?php echo $sf_content ?>
+                    </div>
+                </div>
+                <div class="clear1"></div>
+        
+            <div class="bbl"></div><div class="bbp"></div><div class="bbr"></div>
         </div>
         <div class="clear1"></div>
         <br/><br/>
