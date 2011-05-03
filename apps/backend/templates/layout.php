@@ -51,7 +51,11 @@
                     <?php endif; ?>
                 
                     <li><?php echo link_to('Ordem Serviço', 'ordem_servico') ?></li>
-                    <li><?php echo link_to('Status', 'status') ?></li>
+
+                    <?php if ($sf_user->hasCredential('funcionario')): ?>
+                        <li><?php echo link_to('Status', 'status') ?></li>
+                    <?php endif; ?>
+
                     <li><?php echo link_to('Sair', 'sf_guard_signout') ?></li>
                 </ul>
             <?php endif; ?>
