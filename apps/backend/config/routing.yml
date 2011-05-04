@@ -184,7 +184,7 @@ solicitacao_newOS:
 # default rules
 homepage:
   url:   /
-  param: { module: cliente, action: index }
+  param: { module: ordemServico, action: index }
 
 
 

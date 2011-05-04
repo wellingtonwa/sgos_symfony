@@ -22,7 +22,6 @@ body {
  	margin: 0 auto;
 	padding:0px;
 	text-align: justify;
-	width: 902px;
 	min-height:300px;
 }
 
@@ -268,6 +267,12 @@ a.linkCadastro{
     overflow:hidden;
 }
 
+.bbp{
+    background:url("../images/frame_main_2.png") repeat scroll 0 0 transparent;
+    height: 4px;
+    overflow: hidden;
+}
+
 .bbl{
     overflow:hidden;
     float:left;
@@ -279,8 +284,8 @@ a.linkCadastro{
 .bbr{
     overflow:hidden;
     float:right;
-    width:4px;
-    height: 4px;
+    width: 1px;
+    height:4px;
     background: url("../images/frame_main_corner2.png") no-repeat scroll right -6px transparent;
 }
 
@@ -297,4 +302,31 @@ a.linkCadastro{
     clear:both;
     height:0;
     overflow:hidden;
+}
+
+.menu{
+    width: 90%;
+}
+
+.menu li{
+    width: 90%;
+    list-style: none;
+    padding: 3px;
+}
+
+#menu_lateral{
+    width: 15%;
+    height: 500px;
+    float: left;
+}
+
+#centro{
+    float: left;
+    width: 100%;
+    background-color: #D0D0D0;
+}
+
+#conteudo{
+    
+    padding: 15px;
 }
