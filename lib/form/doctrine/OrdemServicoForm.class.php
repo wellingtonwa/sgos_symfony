@@ -58,7 +58,7 @@ class OrdemServicoForm extends BaseOrdemServicoForm
                  if(trim($form->getObject()->getObservacao()) || empty($textoAlteracao)==false){
                     $form->getObject()->setStatus($status);
                     $textoObservacao = $form->getObject()->getObservacao();
-                    $textoAlteracao = empty($textoObservacao) ? '' : '<br>';
+                    $textoAlteracao .= empty($textoAlteracao) ? '' : '<br>';
                     $form->getObject()->setObservacao($textoAlteracao.$textoObservacao);
                     $form->getObject()->save($con);
                  }
@@ -83,6 +83,14 @@ class OrdemServicoForm extends BaseOrdemServicoForm
         }
 
         return $textoObservacao;
+    }
+
+    public function getDiffServicos(){
+
+    }
+
+    public function getDiffComponentes(){
+        
     }
 
 }
