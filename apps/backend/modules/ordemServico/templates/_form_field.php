@@ -143,9 +143,9 @@
             <?php echo $form->getWidget('descricao_problema')->render('ordem_servico[descricao_problema]', $ordem_servico->getDescricaoProblema()); ?>
         <div style="clear: both;"></div>
     </div>
-
-    <?php include_partial('form_observacao', array('form'=>$form, 'ordem_servico'=>$ordem_servico)) ?>
-    
+    <?php if($sf_user->hasCredential('funcionario') || $sf_user->hasCredential('admin')): ?>
+        <?php include_partial('form_observacao', array('form'=>$form, 'ordem_servico'=>$ordem_servico)) ?>
+    <?php endif; ?>
     <?php include_partial('historico_observacao', array('observacoesOrdemServico'=>$observacoesOrdemServico)) ?>
 </div>
 

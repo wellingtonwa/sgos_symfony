@@ -39,11 +39,16 @@ Cliente:
     telefoneResidencial: {type: string(20)}
     telefoneComercial: {type: string(20)}
     email: { type: string(255) }
+    idUsuario: {type: integer}
   relations:
     Cidade:
       local: idCidade
       foreign: id
       foreignAlias: CidadeClientes
+    sfGuardUser:
+      local: idUsuario
+      foreign: id
+      foreignAlias: UsuarioCliente
 
 
 TipoEquipamento:

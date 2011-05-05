@@ -2,107 +2,107 @@ Cidade:
   Cidade_1:
     nome: 'Juiz de Fora'
     idEstado: '1'
-    created_at: '2011-02-18 17:34:00'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '0000-00-00 00:00:00'
   Cidade_2:
     nome: Barbacena
     idEstado: '1'
-    created_at: '2011-02-18 17:34:00'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '0000-00-00 00:00:00'
   Cidade_3:
     nome: 'Matias Barbosa'
     idEstado: '1'
-    created_at: '2011-02-18 17:34:00'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '0000-00-00 00:00:00'
   Cidade_4:
     nome: 'Santos Dumont'
     idEstado: '1'
-    created_at: '2011-02-18 17:34:00'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '0000-00-00 00:00:00'
   Cidade_5:
     nome: 'Astolfo Dutra'
     idEstado: '1'
-    created_at: '2011-02-18 17:34:00'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '0000-00-00 00:00:00'
   Cidade_6:
     nome: 'Belmiro Braga'
     idEstado: '1'
-    created_at: '2011-02-18 17:34:00'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '0000-00-00 00:00:00'
   Cidade_7:
     nome: 'Belo Horizonte'
     idEstado: '1'
-    created_at: '2011-02-18 17:34:00'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '0000-00-00 00:00:00'
   Cidade_8:
     nome: Contagem
     idEstado: '1'
-    created_at: '2011-02-18 17:34:00'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '0000-00-00 00:00:00'
   Cidade_9:
     nome: Ipatinga
     idEstado: '1'
-    created_at: '2011-02-18 17:34:00'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '0000-00-00 00:00:00'
   Cidade_10:
     nome: Leopoldina
     idEstado: '1'
-    created_at: '2011-02-18 17:34:00'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '0000-00-00 00:00:00'
   Cidade_11:
     nome: 'Além Paraíba'
     idEstado: '1'
-    created_at: '2011-02-18 17:34:00'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '0000-00-00 00:00:00'
   Cidade_12:
     nome: 'Alto Jequitiba'
     idEstado: '1'
-    created_at: '2011-02-18 17:34:00'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '0000-00-00 00:00:00'
   Cidade_13:
     nome: 'Alto Rio Doce'
     idEstado: '1'
-    created_at: '2011-02-18 17:34:00'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '0000-00-00 00:00:00'
   Cidade_14:
     nome: Aracitaba
     idEstado: '1'
-    created_at: '2011-02-18 17:34:00'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '0000-00-00 00:00:00'
   Cidade_15:
     nome: Alvarenga
     idEstado: '1'
-    created_at: '2011-02-18 17:34:00'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '0000-00-00 00:00:00'
   Cidade_16:
     nome: Andradas
     idEstado: '1'
-    created_at: '2011-02-18 17:34:00'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '0000-00-00 00:00:00'
   Cidade_17:
     nome: Alfenas
     idEstado: '1'
-    created_at: '2011-02-18 17:34:00'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '0000-00-00 00:00:00'
   Cidade_18:
     nome: Alagoas
     idEstado: '1'
-    created_at: '2011-02-18 17:34:00'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '0000-00-00 00:00:00'
   Cidade_19:
     nome: Alterosa
     idEstado: '1'
-    created_at: '2011-02-18 17:34:00'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '0000-00-00 00:00:00'
   Cidade_20:
     nome: 'Amparo de Minas'
     idEstado: '1'
-    created_at: '2011-02-18 17:34:00'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '0000-00-00 00:00:00'
   Cidade_21:
     nome: 'Alto Caparao'
     idEstado: '1'
-    created_at: '2011-02-18 17:34:01'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '0000-00-00 00:00:00'
 Cliente:
   Cliente_1:
@@ -115,7 +115,7 @@ Cliente:
     telefoneResidencial: '32 32138626'
     telefoneComercial: '32 88555225'
     email: weberwagner@gmail.com
-    created_at: '2011-02-18 17:34:01'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '2010-09-20 11:33:21'
   Cliente_2:
     nome: 'Rafael Francelino'
@@ -127,8 +127,32 @@ Cliente:
     telefoneResidencial: ''
     telefoneComercial: '32 99371290'
     email: faelfrancelino@gmail.com
-    created_at: '2011-02-18 17:34:01'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '2010-09-20 11:34:33'
+  Cliente_3:
+    nome: 'Wellington Wagner'
+    logradouro: ''
+    numero: ''
+    complemento: ''
+    bairro: ''
+    idCidade: '1'
+    telefoneResidencial: '32 32138626'
+    telefoneComercial: '32 88555494'
+    email: wellingtonwa@gmail.com
+    created_at: '2011-03-14 20:26:05'
+    updated_at: '2011-03-14 20:26:05'
+  Cliente_4:
+    nome: 'Makelele Dourado'
+    logradouro: null
+    numero: null
+    complemento: null
+    bairro: null
+    idCidade: null
+    telefoneResidencial: '55 3215-3152'
+    telefoneComercial: '55 3215-3152'
+    email: makelele@paniconatv.com.br
+    created_at: '2011-03-21 21:43:09'
+    updated_at: '2011-03-21 21:43:09'
 Componente:
   Componente_1:
     nome: 'HD Samsung 320Gb'
@@ -136,42 +160,61 @@ Componente:
     preco: '175.00'
     created_at: '2010-09-20 11:55:21'
     updated_at: '2010-09-20 11:55:21'
+ComponenteOrdemServico:
+  ComponenteOrdemServico_1:
+    idOrdemServico: '1'
+    idComponente: '1'
+    quantidade: '1'
 Equipamento:
   Equipamento_1:
     nome: Notebook
     descricao: 'máquina principal do usuário'
     idTipoEquipamento: '1'
     idCliente: '2'
-    created_at: '2011-02-18 17:34:01'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '0000-00-00 00:00:00'
 Estado:
   Estado_1:
     nome: 'Minas Gerais'
     sigla: MG
     idPais: '1'
-    created_at: '2011-02-18 17:34:00'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '2010-09-20 11:32:03'
 OrdemServico:
   OrdemServico_1:
     idCliente: '2'
-    idEquipamento: '1'
-    status: 'Em execucao'
-    descricao_problema: 'O camagada reclamou do problema na ventuinha'
+    idEquipamento: null
+    status: 'Em Aberto'
+    descricao_problema: ''
     created_at: '0000-00-00 00:00:00'
-    updated_at: '2011-02-18 17:39:13'
+    updated_at: '2011-02-07 11:37:20'
+  OrdemServico_5:
+    idCliente: '3'
+    idEquipamento: null
+    status: 'Em Aberto'
+    descricao_problema: 'asdfdf ads sa asd'
+    created_at: '2011-03-17 23:09:25'
+    updated_at: '2011-03-17 23:09:25'
+  OrdemServico_6:
+    idCliente: '4'
+    idEquipamento: null
+    status: 'Em Aberto'
+    descricao_problema: 'Meu pc parou de funcionar'
+    created_at: '2011-03-21 22:12:09'
+    updated_at: '2011-03-21 22:12:09'
 Pais:
   Pais_1:
     nome: Brasil
     sigla: BRA
-    created_at: '2011-02-18 17:34:00'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '2010-09-20 11:31:41'
 PrecoComponente:
   PrecoComponente_1:
     preco: '175.00'
-    dataInicio: '2011-02-18 17:34:01'
+    dataInicio: '2011-02-16 22:37:00'
     idComponente: '1'
-    created_at: '2011-02-18 17:34:01'
-    updated_at: '2011-02-18 17:34:01'
+    created_at: '2011-02-16 22:37:00'
+    updated_at: '2011-02-16 22:37:00'
   PrecoComponente_2:
     preco: '175.00'
     dataInicio: '2011-02-02 21:18:27'
@@ -223,31 +266,132 @@ Servico:
     created_at: '2010-10-13 13:06:27'
     updated_at: '2010-10-13 13:06:27'
 ServicoOrdemServico:
-  ServicoOrdemServico_2:
+  ServicoOrdemServico_1:
     idOrdemServico: '1'
     idServico: '1'
     quantidade: '1'
-  ServicoOrdemServico_3:
-    idOrdemServico: '1'
-    idServico: '3'
-    quantidade: '1'
+sfGuardGroup:
+  sfGuardGroup_1:
+    name: funcionario
+    description: 'Este é o grupo de funcionários'
+    created_at: '0000-00-00 00:00:00'
+    updated_at: '0000-00-00 00:00:00'
+  sfGuardGroup_2:
+    name: clientes
+    description: 'Este é o grupo de clientes'
+    created_at: '2011-03-21 21:12:30'
+    updated_at: '2011-03-21 21:12:30'
+sfGuardGroupPermission:
+  sfGuardGroupPermission_2_3:
+    Group: sfGuardGroup_2
+    Permission: sfGuardPermission_3
+    created_at: '2011-03-21 21:13:21'
+    updated_at: '2011-03-21 21:13:21'
+sfGuardPermission:
+  sfGuardPermission_1:
+    name: funcionario
+    description: null
+    created_at: '2011-02-21 21:55:57'
+    updated_at: '0000-00-00 00:00:00'
+  sfGuardPermission_2:
+    name: admin
+    description: null
+    created_at: '2011-02-21 22:02:28'
+    updated_at: '0000-00-00 00:00:00'
+  sfGuardPermission_3:
+    name: cliente
+    description: 'Permissões para cliente acessar o sistema com o mínino de pivilégios'
+    created_at: '2011-03-21 21:13:21'
+    updated_at: '2011-03-21 21:13:21'
 sfGuardUser:
-  sfGuardUser_1:
+  sfGuardUser_2:
     first_name: null
     last_name: null
     email_address: wellingtonwa@gmail.com
     username: wellington
     algorithm: sha1
-    salt: 40f7ce63a0369257d17a241a195dbfff
-    password: 42041ad2093613a1532bb5840ec614d451777d35
+    salt: cf545d0770dbb06f4b3f8fa2ef728780
+    password: eea65ac399eb45d9fd0b6f58dfe0f39c167135b4
     is_active: true
     is_super_admin: false
-    last_login: '2011-02-07 17:29:55'
-    created_at: '2011-02-03 09:16:41'
-    updated_at: '2011-02-07 17:29:55'
+    last_login: '2011-05-04 19:25:00'
+    created_at: '2011-02-16 23:36:09'
+    updated_at: '2011-05-04 19:25:00'
+  sfGuardUser_5:
+    first_name: 'Makelele Dourado'
+    last_name: null
+    email_address: makelele@paniconatv.com.br
+    username: ''
+    algorithm: sha1
+    salt: null
+    password: null
+    is_active: true
+    is_super_admin: false
+    last_login: null
+    created_at: '2011-03-21 22:07:29'
+    updated_at: '2011-03-21 22:07:29'
+sfGuardUserGroup:
+  sfGuardUserGroup_2_1:
+    User: sfGuardUser_2
+    Group: sfGuardGroup_1
+    created_at: '0000-00-00 00:00:00'
+    updated_at: '0000-00-00 00:00:00'
+  sfGuardUserGroup_5_2:
+    User: sfGuardUser_5
+    Group: sfGuardGroup_2
+    created_at: '2011-03-21 22:07:29'
+    updated_at: '2011-03-21 22:07:29'
+sfGuardUserPermission:
+  sfGuardUserPermission_2_1:
+    User: sfGuardUser_2
+    Permission: sfGuardPermission_1
+    created_at: '2011-02-21 21:56:29'
+    updated_at: '0000-00-00 00:00:00'
+  sfGuardUserPermission_2_2:
+    User: sfGuardUser_2
+    Permission: sfGuardPermission_2
+    created_at: '2011-02-21 22:03:14'
+    updated_at: '0000-00-00 00:00:00'
+Solicitacao:
+  Solicitacao_3:
+    nome: 'Wellington Wagner'
+    email: wellingtonwa@gmail.com
+    telefone1: '32 32138626'
+    telefone2: '32 32138626'
+    descricao_problema: 'asdfdf ads sa asd'
+    idOrdemServico: '1'
+    created_at: '2011-03-05 21:14:08'
+    updated_at: '2011-03-05 21:14:08'
+  Solicitacao_4:
+    nome: 'Wellington Wagner'
+    email: wellingtonwa@gmail.com
+    telefone1: '32 32138626'
+    telefone2: '32 32138626'
+    descricao_problema: 'asdfdf ads sa asd'
+    idOrdemServico: '5'
+    created_at: '2011-03-05 21:14:43'
+    updated_at: '2011-03-17 23:09:25'
+  Solicitacao_5:
+    nome: 'Makelele Dourado'
+    email: makelele@paniconatv.com.br
+    telefone1: '55 3215-3152'
+    telefone2: '55 3215-3152'
+    descricao_problema: 'Meu pc parou de funcionar'
+    idOrdemServico: '6'
+    created_at: '2011-03-21 21:30:09'
+    updated_at: '2011-03-21 22:12:09'
+  Solicitacao_6:
+    nome: ''
+    email: ''
+    telefone1: ''
+    telefone2: null
+    descricao_problema: ''
+    idOrdemServico: null
+    created_at: '2011-03-21 22:12:30'
+    updated_at: '2011-03-21 22:12:30'
 TipoEquipamento:
   TipoEquipamento_1:
     nome: NoteBook
     descricao: 'Computador portátil'
-    created_at: '2011-02-18 17:34:00'
+    created_at: '2011-02-16 22:37:00'
     updated_at: '2010-09-20 11:36:05'

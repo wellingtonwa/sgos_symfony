@@ -437,4 +437,43 @@ class ordemServicoActions extends autoOrdemServicoActions
         return $this->getUser()->setAttribute("componente_page", $pagina, 'paginacao_admin');
     }
 
+    protected function getPager()
+    {
+        $pager = $this->configuration->getPager('OrdemServico');
+        if($this->getUser()->hasCredential('funcionario') || $this->getUser()->hasCredential('admin')){
+            $pager->setQuery($this->buildQuery());
+        }
+        else{
+            $idUsuarioSistema = $this->getUser()->getAttribute('user_id', null, 'sfGuardSecurityUser');
+            $cliente = Doctrine::getTable('Cliente')->findOneByIdUsuario($idUsuarioSistema);
+            $pager->setQuery($this->buildQueryCliente($cliente->getId()));
+        }
+        
+
+        $pager->setPage($this->getPage());
+        $pager->init();
+
+        return $pager;
+    }
+
+
+  protected function buildQueryCliente($idCliente)
+  {
+    $tableMethod = $this->configuration->getTableMethod();
+    if (null === $this->filters)
+    {
+      $this->filters = $this->configuration->getFilterForm($this->getFilters());
+    }
+
+    $this->filters->setTableMethod($tableMethod);
+
+    $query = $this->filters->buildQuery($this->getFilters());
+
+    $this->addSortQuery($query);
+
+    $event = $this->dispatcher->filter(new sfEvent($this, 'admin.build_query'), $query);
+    $query = Doctrine::getTable('OrdemServico')->getOrdemServicoCliente($idCliente);
+
+    return $query;
+  }
 }
