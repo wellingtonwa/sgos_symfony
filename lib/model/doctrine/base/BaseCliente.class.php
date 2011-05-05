@@ -14,7 +14,9 @@
  * @property string $telefoneResidencial
  * @property string $telefoneComercial
  * @property string $email
+ * @property integer $idUsuario
  * @property Cidade $Cidade
+ * @property sfGuardUser $sfGuardUser
  * @property Doctrine_Collection $ClienteEquipamentos
  * @property Doctrine_Collection $OrdensServicoCliente
  * 
@@ -27,7 +29,9 @@
  * @method string              getTelefoneResidencial()  Returns the current record's "telefoneResidencial" value
  * @method string              getTelefoneComercial()    Returns the current record's "telefoneComercial" value
  * @method string              getEmail()                Returns the current record's "email" value
+ * @method integer             getIdUsuario()            Returns the current record's "idUsuario" value
  * @method Cidade              getCidade()               Returns the current record's "Cidade" value
+ * @method sfGuardUser         getSfGuardUser()          Returns the current record's "sfGuardUser" value
  * @method Doctrine_Collection getClienteEquipamentos()  Returns the current record's "ClienteEquipamentos" collection
  * @method Doctrine_Collection getOrdensServicoCliente() Returns the current record's "OrdensServicoCliente" collection
  * @method Cliente             setNome()                 Sets the current record's "nome" value
@@ -39,7 +43,9 @@
  * @method Cliente             setTelefoneResidencial()  Sets the current record's "telefoneResidencial" value
  * @method Cliente             setTelefoneComercial()    Sets the current record's "telefoneComercial" value
  * @method Cliente             setEmail()                Sets the current record's "email" value
+ * @method Cliente             setIdUsuario()            Sets the current record's "idUsuario" value
  * @method Cliente             setCidade()               Sets the current record's "Cidade" value
+ * @method Cliente             setSfGuardUser()          Sets the current record's "sfGuardUser" value
  * @method Cliente             setClienteEquipamentos()  Sets the current record's "ClienteEquipamentos" collection
  * @method Cliente             setOrdensServicoCliente() Sets the current record's "OrdensServicoCliente" collection
  * 
@@ -89,6 +95,9 @@ abstract class BaseCliente extends sfDoctrineRecord
              'type' => 'string',
              'length' => 255,
              ));
+        $this->hasColumn('idUsuario', 'integer', null, array(
+             'type' => 'integer',
+             ));
     }
 
     public function setUp()
@@ -96,6 +105,10 @@ abstract class BaseCliente extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('Cidade', array(
              'local' => 'idCidade',
+             'foreign' => 'id'));
+
+        $this->hasOne('sfGuardUser', array(
+             'local' => 'idUsuario',
              'foreign' => 'id'));
 
         $this->hasMany('Equipamento as ClienteEquipamentos', array(
