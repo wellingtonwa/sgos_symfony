@@ -1,3 +1,12 @@
+cidade_cidade:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Cidade
+    module:               cidade
+    prefix_path:          /cidade
+    column:               id
+    with_wildcard_routes: true
+
 solicitacao:
   class: sfDoctrineRouteCollection
   options:

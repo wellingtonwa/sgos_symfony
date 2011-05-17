@@ -21,7 +21,8 @@ generator:
       list:
         display: [=nome, =telefone1, =telefone2, =descricao_problema]
         
-      filter:  ~
+      filter:  
+        display: [nome, email, telefone1, telefone2, descricao_problema]
       form:    ~
       edit:    ~
       new:     ~

@@ -23,53 +23,44 @@
     <div id="container">
     <div id="content">
         <div id="header">
-            TOPO
+            <div class="logo"></div>
         </div>
-        <div id="menu_lateral"><br/><br/>
-
-            <?php if ($sf_user->isAuthenticated()): ?>
-                <ul class="menu">
-                    <?php if ($sf_user->hasCredential('funcionario')): ?>
-
-                        <?php if($sf_user->hasCredential("admin")):?>
-
-                            <li><?php echo link_to('Usuarios Sistema', 'sf_guard_user') ?></li>
-                            <li><?php echo link_to('Permissões', 'sf_guard_permission') ?></li>
-
-                        <?php endif; ?>
-
-                        <li><?php echo link_to('Pais', 'pais') ?></li>
-                        <li><?php echo link_to('Estados', 'estado') ?></li>
-                        <li><?php echo link_to('Cidades', 'cidade') ?></li>
-                        <li><?php echo link_to('Equipamento', 'equipamento') ?></li>
-                        <li><?php echo link_to('Tipo de Equipamento', 'tipo_equipamento') ?></li>
-                        <li><?php echo link_to('Clientes', 'cliente') ?></li>
-                        <li><?php echo link_to('Serviços', 'servico') ?></li>
-                        <li><?php echo link_to('Componentes', 'componente') ?></li>
-                        <li><?php echo link_to('Solicitações', 'solicitacao') ?></li>
-
-                    <?php endif; ?>
+        <?php if ($sf_user->isAuthenticated()): ?>
+            <ul class="menu">
                 
-                    <li><?php echo link_to('Ordem Serviço', 'ordem_servico') ?></li>
 
-                    <?php if ($sf_user->hasCredential('funcionario')): ?>
-                        <li><?php echo link_to('Status', 'status') ?></li>
-                    <?php endif; ?>
+                <?php if($sf_user->hasCredential("admin")):?>
 
-                    <li><?php echo link_to('Sair', 'sf_guard_signout') ?></li>
-                </ul>
-            <?php endif; ?>
-        </div>
-        <div style="overflow: hidden; width: 85%">
-            <div class="btl"></div><div class="btr"></div><div class="btp"></div>
-                <div id="centro">
-                    <div id="conteudo">
-                        <?php echo $sf_content ?>
-                    </div>
-                </div>
-                <div class="clear1"></div>
+                    <div class="menu_ls"></div>
+                    <li class="ui-state-default ui-corner-all"><?php echo link_to('Usuarios Sistema', 'sf_guard_user') ?></li>
+                    <li class="ui-state-default ui-corner-all"><?php echo link_to('Permissões', 'sf_guard_permission') ?></li>
+
+                <?php endif; ?>
+                <?php if ($sf_user->hasCredential('funcionario')): ?>
+
+                    <li class="ui-state-default ui-corner-all"><?php echo link_to('Pais', 'pais') ?></li>
+                    <li class="ui-state-default ui-corner-all"><?php echo link_to('Estados', 'estado') ?></li>
+                    <li class="ui-state-default ui-corner-all"><?php echo link_to('Cidades', 'cidade') ?></li>
+                    <li class="ui-state-default ui-corner-all"><?php echo link_to('Equipamento', 'equipamento') ?></li>
+                    <li class="ui-state-default ui-corner-all"><?php echo link_to('Tipo de Equipamento', 'tipo_equipamento') ?></li>
+                    <li class="ui-state-default ui-corner-all"><?php echo link_to('Clientes', 'cliente') ?></li>
+                    <li class="ui-state-default ui-corner-all"><?php echo link_to('Serviços', 'servico') ?></li>
+                    <li class="ui-state-default ui-corner-all"><?php echo link_to('Componentes', 'componente') ?></li>
+                    <li class="ui-state-default ui-corner-all"><?php echo link_to('Solicitações', 'solicitacao') ?></li>
+
+                <?php endif; ?>
+
+                <li class="ui-state-default ui-corner-all"><?php echo link_to('Ordem Serviço', 'ordem_servico') ?></li>
+                <li class="ui-state-default ui-corner-all"><?php echo link_to('Sair', 'sf_guard_signout') ?></li>
+            </ul>
+        <?php endif; ?>
         
-            <div class="bbl"></div><div class="bbp"></div><div class="bbr"></div>
+        <div style="overflow: hidden; width: 80%" class="ui-corner-all">
+            <div id="centro">
+                <div id="conteudo">
+                    <?php echo $sf_content ?>
+                </div>
+            </div>
         </div>
         <div class="clear1"></div>
         <br/><br/>

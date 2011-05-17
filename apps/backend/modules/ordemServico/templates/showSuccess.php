@@ -1,30 +1,41 @@
-<table>
-  <tbody>
-    <tr>
-      <th>Id:</th>
-      <td><?php echo $ordem_servico->getId() ?></td>
-    </tr>
-    <tr>
-      <th>Id cliente:</th>
-      <td><?php echo $ordem_servico->getIdCliente() ?></td>
-    </tr>
-    <tr>
-      <th>Id equipamento:</th>
-      <td><?php echo $ordem_servico->getIdEquipamento() ?></td>
-    </tr>
-    <tr>
-      <th>Created at:</th>
-      <td><?php echo $ordem_servico->getCreatedAt() ?></td>
-    </tr>
-    <tr>
-      <th>Updated at:</th>
-      <td><?php echo $ordem_servico->getUpdatedAt() ?></td>
-    </tr>
-  </tbody>
-</table>
+<?php include_partial('ordemServico/assets') ?>
 
-<hr />
-
-<a href="<?php echo url_for('ordemServico/edit?id='.$ordem_servico->getId()) ?>">Edit</a>
-&nbsp;
-<a href="<?php echo url_for('ordemServico/index') ?>">List</a>
+<div id="sf_admin_container">
+    <table id="sf_fieldset_none">
+        <tbody>
+            <tr class="sf_admin_form_row sf_admin_enum sf_admin_filter_field_status">
+                <td>
+                    <strong>Nome do Cliente: </strong>
+                </td>
+                <td>
+                    <?php echo $solicitacao->getNome() ?>
+                </td>
+            </tr>
+            <tr class="sf_admin_form_row sf_admin_enum sf_admin_filter_field_status">
+                <td>
+                    <strong>Telefone(s) do solicitante: </strong>
+                </td>
+                <td>
+                    <?php echo $solicitacao->getTelefone1(); ?> | <?php echo $solicitacao->getTelefone2() ?>
+                </td>
+            </tr>
+            <tr class="sf_admin_form_row sf_admin_enum sf_admin_filter_field_status">
+                <td>
+                    <strong>E-mail: </strong>
+                </td>
+                <td>
+                    <?php echo $solicitacao->getEmail() ?>
+                </td>
+            </tr>
+            <tr class="sf_admin_form_row sf_admin_enum sf_admin_filter_field_status">
+                <td>
+                    <strong>Descrição do problema: </strong>
+                </td>
+                <td>
+                    <?php echo $solicitacao->getDescricaoProblema(); ?>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<?php include_partial('show_actions', array('solicitacao'=>$solicitacao, 'ordemServico'=>$ordemServico)); ?>

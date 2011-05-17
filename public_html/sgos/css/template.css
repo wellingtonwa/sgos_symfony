@@ -36,20 +36,12 @@ body {
   text-align:right !important;
 }
 
-#header_menu li{
-	background: url(../images/li_bg.jpg) no-repeat !important;
-	color:#FFF !important;
-	font-size:1.0em;
-	font-weight:bold;
-	height:21px;
-	display:inline-block;
-	padding-top:3px;
-	position:relative;
-	margin-top:5px;
-	right:10px;
-	text-align:center;
-	top:0px;
-	width:84px;	
+#header .logo{
+    background: url(../images/logo.png) no-repeat;
+    width: 400px;
+    height: 126px;
+    margin-left: 15px;
+    margin-top: 15px;
 }
 
 #busca {
@@ -248,7 +240,7 @@ a.linkCadastro{
     float:left;
     width:4px;
     height: 4px;
-    background: url("../images/frame_main_corner2.png") no-repeat scroll left top transparent
+    background: url("../images/frame_main_corner1.png") no-repeat scroll left top transparent
 }
 
 .btr{
@@ -256,11 +248,11 @@ a.linkCadastro{
     float:right;
     width:4px;
     height: 4px;
-    background: url("../images/frame_main_corner2.png") no-repeat scroll right top transparent;
+    background: url("../images/frame_main_corner1.png") no-repeat scroll right top transparent;
 }
 
 .btp{
-    background:url("../images/frame_main_2.png") repeat scroll 0 0 transparent;
+    background:url("../images/frame_main_3  .png") repeat scroll 0 0 transparent;
     height:4px;
     top:inherit;
     position:relative;
@@ -268,7 +260,7 @@ a.linkCadastro{
 }
 
 .bbp{
-    background:url("../images/frame_main_2.png") repeat scroll 0 0 transparent;
+    background:url("../images/frame_main_3.png") repeat scroll 0 0 transparent;
     height: 4px;
     overflow: hidden;
 }
@@ -278,7 +270,7 @@ a.linkCadastro{
     float:left;
     width:4px;
     height:4px;
-    background: url("../images/frame_main_corner2.png") no-repeat scroll left -6px transparent;
+    background: url("../images/frame_main_corner1.png") no-repeat scroll left -6px transparent;
 }
 
 .bbr{
@@ -286,7 +278,7 @@ a.linkCadastro{
     float:right;
     width: 1px;
     height:4px;
-    background: url("../images/frame_main_corner2.png") no-repeat scroll right -6px transparent;
+    background: url("../images/frame_main_corner1.png") no-repeat scroll right -6px transparent;
 }
 
 #mensagemSistema span{
@@ -305,25 +297,22 @@ a.linkCadastro{
 }
 
 .menu{
-    width: 90%;
+    width: 12%;
+    float: left;
 }
 
 .menu li{
-    width: 90%;
+    text-align: center;
     list-style: none;
-    padding: 3px;
-}
-
-#menu_lateral{
-    width: 15%;
-    height: 500px;
-    float: left;
+    padding: 1px;
+    margin: 2px;
+    
 }
 
 #centro{
     float: left;
     width: 100%;
-    background-color: #D0D0D0;
+    background-color: #D8D8D8;
 }
 
 #conteudo{
