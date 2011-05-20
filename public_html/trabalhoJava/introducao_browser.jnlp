@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp spec="1.0+" codebase="http://localhost:8082/servlet/org.netbeans.modules.javafx.project.JnlpDownloadServlet/C%3A/Documents+and+Settings/wellington.CESAC/Meus+documentos/NetBeansProjects/introducao/dist/" href="introducao_browser.jnlp">
+    <information>
+        <title>introducao</title>
+        <vendor>wellington</vendor>
+        <homepage href="http://localhost:8082/servlet/org.netbeans.modules.javafx.project.JnlpDownloadServlet/C%3A/Documents+and+Settings/wellington.CESAC/Meus+documentos/NetBeansProjects/introducao/dist/"/>
+        <description>introducao</description>
+        <icon kind="splash" href="http://dl.javafx.com/1.3/splash.png"/>
+        <offline-allowed/>
+    </information>
+    <security>
+        <all-permissions/>
+    </security>
+    <resources>
+        <j2se version="1.5+"/>
+        <extension name="JavaFX Runtime" href="http://dl.javafx.com/1.3/javafx-rt.jnlp"/>
+        <jar href="introducao.jar" main="true" size="23370"/>
+    </resources>
+    <applet-desc name="introducao" main-class="com.sun.javafx.runtime.adapter.Applet" progress-class="com.javafx.progressbar.ProgressManager" width="200" height="200">
+        <param name="MainJavaFXScript" value="introducao.Main"/>
+    </applet-desc>
+    <update check="always"/>
+</jnlp>

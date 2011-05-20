@@ -17,4 +17,10 @@ class estadoActions extends autoEstadoActions
         echo $this->getUser()->setCulture('pt_BR');
         parent::preExecute();
     }
+    
+    public function executeShow(sfWebRequest $request){
+
+        $this->estado = $this->getRoute()->getObject();
+
+    }
 }

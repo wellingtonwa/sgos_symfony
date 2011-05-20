@@ -33,7 +33,6 @@
 
                     <div class="menu_ls"></div>
                     <li class="ui-state-default ui-corner-all"><?php echo link_to('Usuarios Sistema', 'sf_guard_user') ?></li>
-                    <li class="ui-state-default ui-corner-all"><?php echo link_to('Permissões', 'sf_guard_permission') ?></li>
 
                 <?php endif; ?>
                 <?php if ($sf_user->hasCredential('funcionario')): ?>

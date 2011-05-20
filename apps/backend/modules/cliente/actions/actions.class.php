@@ -17,4 +17,10 @@ class clienteActions extends autoClienteActions
         echo $this->getUser()->setCulture('pt_BR');
         parent::preExecute();
     }
+    
+    public function executeShow(sfWebRequest $request){
+
+        $this->cliente = $this->getRoute()->getObject();
+
+    }
 }

@@ -4,7 +4,7 @@ generator:
     model_class:           cliente
     theme:                 admin
     non_verbose_templates: true
-    with_show:             false
+    with_show:             true
     singular:              ~
     plural:                ~
     route_prefix:          cliente
@@ -17,7 +17,7 @@ generator:
       fields:  ~
       list:
         title: Lista de Clientes
-        layout: stacked
+        layout: tabular
         display: [ =nome, =email, =telefoneResidencial, =telefoneComercial, =cidade ]
       filter:
         display: [ nome, email, logradouro, numero, bairro, idCidade,  created_at]
