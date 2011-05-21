@@ -4,7 +4,7 @@ generator:
     model_class:           OrdemServico
     theme:                 admin
     non_verbose_templates: true
-    with_show:             false
+    with_show:             true
     singular:              ~
     plural:                ~
     route_prefix:          ordem_servico
@@ -12,24 +12,16 @@ generator:
     actions_base_class:    sfActions
 
     config:
-      actions:
-        _save:{ credentials: admi }
-      fields:
-        id: {label: N. OS}
-        created_at: {label: Criado em}
+      actions: ~
+      fields:  
         idCliente: {label: Cliente}
-        status: {label: Status}
-        equipamentos_ordem_servico_list: {label: Equipamentos }
-      list:
-        title: Lista de Ordem de Servico
-        display: [id, cliente, equipamento]
-      filter:
-        display: [status, created_at]
-      form: ~
-        #display: [descricao, idCliente]
-      edit:
-        title: Editando Ordem de Serviço
-        actions: {_save: {label: alterar}, _list: {label: voltar}, _delete: {label: excluir}}
-      new:
-        title: Nova Ordem de Serviço
-        actions: {_save: {label: salvar}, _list: {label: voltar}}
+        idEquipamento: {label: Equipamento}
+        created_at: {label: Cadastrado em}
+        updated_at: {label: Atualizado em}
+        servicos: {label: Serviços}
+      list:    ~
+      filter:  
+        display: [idCliente, status, descricao_problema]
+      form:    ~
+      edit:    ~
+      new:     ~

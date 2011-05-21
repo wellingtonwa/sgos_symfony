@@ -51,4 +51,10 @@ abstract class sfModelGeneratorHelper
 
     return '<li class="sf_admin_action_save_and_add"><input type="submit" value="'.__($params['label'], array(), 'sf_admin').'" name="_save_and_add" /></li>';
   }
+  
+  public function linkToShow($object, $params)
+  {    
+      return '<li class="sf_admin_action_show">'.link_to(__($params['label'] != 'Show' ? $params['label'] : 'Show', array(), 'sf_admin'), $this->getUrlForAction('show'), $object).'</li>';
+  }
+  
 }

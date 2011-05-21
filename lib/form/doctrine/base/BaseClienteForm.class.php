@@ -25,6 +25,7 @@ abstract class BaseClienteForm extends BaseFormDoctrine
       'telefoneResidencial' => new sfWidgetFormInputText(),
       'telefoneComercial'   => new sfWidgetFormInputText(),
       'email'               => new sfWidgetFormInputText(),
+      'idUsuario'           => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => true)),
       'created_at'          => new sfWidgetFormDateTime(),
       'updated_at'          => new sfWidgetFormDateTime(),
     ));
@@ -40,6 +41,7 @@ abstract class BaseClienteForm extends BaseFormDoctrine
       'telefoneResidencial' => new sfValidatorString(array('max_length' => 20, 'required' => false)),
       'telefoneComercial'   => new sfValidatorString(array('max_length' => 20, 'required' => false)),
       'email'               => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'idUsuario'           => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'required' => false)),
       'created_at'          => new sfValidatorDateTime(),
       'updated_at'          => new sfValidatorDateTime(),
     ));

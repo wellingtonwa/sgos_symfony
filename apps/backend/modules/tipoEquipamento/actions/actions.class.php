@@ -13,4 +13,9 @@ require_once dirname(__FILE__).'/../lib/tipoEquipamentoGeneratorHelper.class.php
  */
 class tipoEquipamentoActions extends autoTipoEquipamentoActions
 {
+    public function executeShow(sfWebRequest $request){
+
+        $this->tipo_equipamento = $this->getRoute()->getObject();
+
+    }
 }

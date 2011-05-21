@@ -27,15 +27,15 @@
         </div>
         <?php if ($sf_user->isAuthenticated()): ?>
             <ul class="menu">
+                
+
+                <?php if($sf_user->hasCredential("admin")):?>
+
+                    <div class="menu_ls"></div>
+                    <li class="ui-state-default ui-corner-all"><?php echo link_to('Usuarios Sistema', 'sf_guard_user') ?></li>
+
+                <?php endif; ?>
                 <?php if ($sf_user->hasCredential('funcionario')): ?>
-
-                    <?php if($sf_user->hasCredential("admin")):?>
-
-                        <div class="menu_ls"></div>
-                        <li class="ui-state-default ui-corner-all"><?php echo link_to('Usuarios Sistema', 'sf_guard_user') ?></li>
-                        <li class="ui-state-default ui-corner-all"><?php echo link_to('Permissões', 'sf_guard_permission') ?></li>
-
-                    <?php endif; ?>
 
                     <li class="ui-state-default ui-corner-all"><?php echo link_to('Pais', 'pais') ?></li>
                     <li class="ui-state-default ui-corner-all"><?php echo link_to('Estados', 'estado') ?></li>
@@ -50,11 +50,6 @@
                 <?php endif; ?>
 
                 <li class="ui-state-default ui-corner-all"><?php echo link_to('Ordem Serviço', 'ordem_servico') ?></li>
-
-                <?php if ($sf_user->hasCredential('funcionario')): ?>
-                    <li class="ui-state-default ui-corner-all"><?php echo link_to('Status', 'status') ?></li>
-                <?php endif; ?>
-
                 <li class="ui-state-default ui-corner-all"><?php echo link_to('Sair', 'sf_guard_signout') ?></li>
             </ul>
         <?php endif; ?>

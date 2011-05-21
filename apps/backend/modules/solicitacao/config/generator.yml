@@ -19,9 +19,11 @@ generator:
         created_at: {label: Criado em}
         updated_at: {label: Altualizado em}
       list:
+        title: Lista de Solicitações
         display: [=nome, =telefone1, =telefone2, =descricao_problema]
         
-      filter:  ~
+      filter:  
+        display: [nome, email, telefone1, telefone2, descricao_problema]
       form:    ~
       edit:    ~
       new:     ~

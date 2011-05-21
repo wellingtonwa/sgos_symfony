@@ -15,5 +15,11 @@ class paisActions extends autoPaisActions
         echo $this->getUser()->setCulture('pt_BR');
         parent::preExecute();
     }
-  
+    
+    public function executeShow(sfWebRequest $request){
+
+      $this->pais = $this->getRoute()->getObject();
+
+    }
+    
 }

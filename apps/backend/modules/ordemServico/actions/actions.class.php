@@ -476,4 +476,13 @@ class ordemServicoActions extends autoOrdemServicoActions
 
     return $query;
   }
+  
+  public function executeShow(sfWebRequest $request){
+
+    $this->ordem_servico = $this->getRoute()->getObject();
+
+    $this->observacoesOrdemServico = Doctrine::getTable('ObservacaoOrdemServico')->findByOrdemServico($this->ordem_servico->getId());
+    
+    
+  }
 }

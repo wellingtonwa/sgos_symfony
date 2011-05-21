@@ -1,3 +1,15 @@
+update:
+  is_secure: on
+  credentials: [funcionario]
+
+save:
+  is_secure: on
+  credentials: [funcionario]
+
+delete:
+  is_secure: on
+  credentials: [[funcionario]]
+
 default:
   is_secure: on
-  credentials: admin, funcionario
+  credentials: [[admin,funcionario, cliente]]

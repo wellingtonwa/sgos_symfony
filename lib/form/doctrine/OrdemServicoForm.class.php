@@ -29,8 +29,10 @@ class OrdemServicoForm extends BaseOrdemServicoForm
       $this->widgetSchema['observacao']['status'] = new sfWidgetFormInputHidden();
       $this->widgetSchema['observacao']['idUsuario'] = new sfWidgetFormInputHidden();
       $this->widgetSchema['observacao']['idOrdemServico'] = new sfWidgetFormInputHidden();
-
+  
+      
       // Configurando os validadores da Observacao
+      $this->validatorSchema['observacao']['idOrdemServico']->setOption('required', false);
       $this->validatorSchema['observacao']['observacao']->setOption('required', false);
       $this->validatorSchema['observacao']['created_at']->setOption('required', false);
       $this->validatorSchema['observacao']['updated_at']->setOption('required', false);
@@ -47,15 +49,15 @@ class OrdemServicoForm extends BaseOrdemServicoForm
   public function  saveEmbeddedForms($con = null, $forms = null) {
 
         $status = $this->getObject()->getStatus();
-
+        
         if (null === $forms)
         {
           $forms = $this->embeddedForms;
         }
-
+        
         foreach($forms as $form){
-
-            if($form->getModelName() == 'ObservacaoOrdemServico')
+            
+            if($form->getModelName() == 'ObservacaoOrdemServico' && $this->isNew() == false){
                  $textoAlteracao = $this->getDiffOrdemServico();
                  if(trim($form->getObject()->getObservacao()) || empty($textoAlteracao)==false){
                     $form->getObject()->setStatus($status);
@@ -64,6 +66,7 @@ class OrdemServicoForm extends BaseOrdemServicoForm
                     $form->getObject()->setObservacao($textoAlteracao.$textoObservacao);
                     $form->getObject()->save($con);
                  }
+            }
         }
 
         //parent::saveEmbeddedForms($con, $forms);

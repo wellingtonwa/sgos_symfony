@@ -13,8 +13,11 @@ require_once dirname(__FILE__).'/../lib/cidadeGeneratorHelper.class.php';
  */
 class cidadeActions extends autoCidadeActions
 {
-    public function preExecute(){
-        echo $this->getUser()->setCulture('pt_BR');
-        parent::preExecute();
+    
+    public function executeShow(sfWebRequest $request){
+
+        $this->cidade = $this->getRoute()->getObject();
+
     }
+    
 }
