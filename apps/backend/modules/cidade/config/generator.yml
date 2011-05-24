@@ -1,31 +1,30 @@
 generator:
   class: sfDoctrineGenerator
   param:
-    model_class:           cidade
+    model_class:           Cidade
     theme:                 admin
     non_verbose_templates: true
-    with_show:             false
+    with_show:             true
     singular:              ~
     plural:                ~
-    route_prefix:          cidade
+    route_prefix:          cidade_cidade
     with_doctrine_route:   true
     actions_base_class:    sfActions
 
     config:
       actions: ~
-      fields:
-        nome: {label: Nome}
+      fields:  
         idEstado: {label: Estado}
-        display: [=nome, =estado]
-      list:
+      list:  
         title: Lista de Cidades
-        display: [nome, estado]
-      filter:
+        display: [=nome, estado]
+        max_per_page: 10
+      filter:  
         display: [nome, idEstado]
       form:    ~
       edit:
-        title: Editando %%nome%%
-        actions: {_save: {label: Salvar}, _list: {label: voltar}, _delete: {label: Excluir}}
-      new:
+        title: Editando - %%nome%%
+        actions: {_save: {label: Salvar}, _list: {label: Voltar}, _delete: {label: Excluir}}
+      new:     
         title: Nova Cidade
-        actions: {_save: {label: Salvar}, _list: {label: voltar}}
+        actions: {_save: {label: Salvar}, _list: {label: Voltar}}

@@ -13,4 +13,10 @@ require_once dirname(__FILE__).'/../lib/componenteGeneratorHelper.class.php';
  */
 class componenteActions extends autoComponenteActions
 {
+    public function executeShow(sfWebRequest $request){
+
+        $this->componente = $this->getRoute()->getObject();
+
+    }
+    
 }

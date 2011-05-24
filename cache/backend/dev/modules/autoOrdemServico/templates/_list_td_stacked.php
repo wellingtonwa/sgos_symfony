@@ -1,0 +1,3 @@
+<td colspan="7">
+  <?php echo __('%%id%% - %%idCliente%% - %%idEquipamento%% - %%status%% - %%descricao_problema%% - %%created_at%% - %%updated_at%%', array('%%id%%' => link_to($ordem_servico->getId(), 'ordem_servico_edit', $ordem_servico), '%%idCliente%%' => $ordem_servico->getIdCliente(), '%%idEquipamento%%' => $ordem_servico->getIdEquipamento(), '%%status%%' => $ordem_servico->getStatus(), '%%descricao_problema%%' => $ordem_servico->getDescricaoProblema(), '%%created_at%%' => false !== strtotime($ordem_servico->getCreatedAt()) ? format_date($ordem_servico->getCreatedAt(), "f") : '&nbsp;', '%%updated_at%%' => false !== strtotime($ordem_servico->getUpdatedAt()) ? format_date($ordem_servico->getUpdatedAt(), "f") : '&nbsp;'), 'messages') ?>
+</td>

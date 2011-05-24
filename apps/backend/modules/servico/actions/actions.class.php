@@ -13,4 +13,9 @@ require_once dirname(__FILE__).'/../lib/servicoGeneratorHelper.class.php';
  */
 class servicoActions extends autoServicoActions
 {
+    public function executeShow(sfWebRequest $request){
+
+        $this->servico = $this->getRoute()->getObject();
+
+    }
 }
