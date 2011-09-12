@@ -127,7 +127,7 @@ class manutencao{
 			
             // Obtendo o número de inscrição do candidato
             preg_match_all("/item=[0-9-]+/i", $output, $matchs);
-			preg_match_all("/bold\">[a-zA-Z¦. ]+</i", $output, $matchsNomes);
+			preg_match_all("/bold\">[a-zA-Z¦. '-]+</i", $output, $matchsNomes);
 			preg_match_all("/index[a-zA-Z0-9.?=&;:-]*item=[0-9-]{5,8}&amp;layout=print/i", $output, $matchsURLNotas);
 					
 			if(count($matchs[0]) != count($matchsURLNotas[0])){
@@ -139,7 +139,7 @@ class manutencao{
                     $numeroInscricao = substr($numeroInscricao, 5,8);
                     $this->dadosCandidatos[$numeroInscricao]['inscricao'] = $numeroInscricao;
 					$this->dadosCandidatos[$numeroInscricao]['link_nota'] = "http://www4.vestibular.ufjf.br/resultfinalvest/notaspism12/miolo.ufjf.br_8594/".$matchsURLNotas[0][$idxInscricao];
-                    $this->dadosCandidatos[$numeroInscricao]['nome'] = substr($matchsNomes[0][$idxInscricao], 6, -1);
+                    $this->dadosCandidatos[$numeroInscricao]['nome'] = str_replace("'", "''", substr($matchsNomes[0][$idxInscricao], 6, -1));
             }
 			
 			

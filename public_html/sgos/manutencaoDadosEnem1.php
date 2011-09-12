@@ -5,7 +5,7 @@ class manutencao{
 
     public $dadosModulo;
     public $dadosCandidatos;
-public $conn;
+	public $conn;
 
     function conectar(){
         $this->conn = odbc_connect("Driver={SQL Server Native Client 10.0};Server=192.168.1.150;Database=ACAprod1;", 'webuserac', 'ocvuosqlserver');
@@ -106,7 +106,7 @@ public $conn;
             // Obtendo o número de inscrição do candidato
             preg_match_all("/f=\"javascript:notas\('[0-9-]*'\)/i", $output, $matchs);
 			// Obtendo os nomes dos candidatos
-			preg_match_all("/bold\">[a-zA-Z¦. ]+</i", $output, $matchsNomes);
+			preg_match_all("/bold\">[a-zA-Z¦. '-]+</i", $output, $matchsNomes);
 			
 			
 			echo $letra;
@@ -114,10 +114,8 @@ public $conn;
                     $numeroInscricao = substr($numeroInscricao, 21,8);
                     $this->dadosCandidatos[$numeroInscricao]['inscricao'] = $numeroInscricao;
 					$this->dadosCandidatos[$numeroInscricao]['link_nota'] = $this->getUrlNotaCandidato($numeroInscricao);
-                    $this->dadosCandidatos[$numeroInscricao]['nome'] = substr($matchsNomes[0][$idxInscricao], 6, -1);
+                    $this->dadosCandidatos[$numeroInscricao]['nome'] = str_replace("'", "''", substr($matchsNomes[0][$idxInscricao], 6, -1));
             }
-			
-			
 			
 			foreach($this->dadosCandidatos as $dadosCandidato){
 				$link = $dadosCandidato['link_nota'];
@@ -133,7 +131,7 @@ public $conn;
 
 					IF @id_aluno IS NULL
 						BEGIN 
-							INSERT INTO pism_aluno VALUES ('".$nome."', '".$inscricao."', null);
+							INSERT INTO pism_aluno VALUES ('".$nome."', '".$inscricao."', null, null);
 							SET @id_aluno = @@IDENTITY;
 						END 
 
