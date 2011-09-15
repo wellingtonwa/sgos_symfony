@@ -73,7 +73,7 @@ class manutencao{
         $this->conectar();
 		
 		
-        $arrayLetras = range('A', 'Z');
+        //$arrayLetras = range('A', 'Z');
 		
 		$sql = "SELECT TOP 10 moduloAluno.* , aluno.numero_inscricao
 					FROM pism_modulo_aluno moduloAluno, pism_aluno aluno 
@@ -108,7 +108,7 @@ class manutencao{
 				preg_match_all("/>(&nbsp;){0,2}[a-zA-Z]{3}</i", $output, $matchs);
 				foreach($matchs[0] AS $nomeDisciplina){
 					preg_match_all("/[A-Z]{1}[a-z]{2}/", $nomeDisciplina, $matchDisciplina);
-					$this->dadosCandidatos[$dadosModulo->numero_inscricao]['modulos'][$nomeModulo]['disciplinas'][$matchDisciplina[0][0]] = array('notaDiscursiva'=>array(), 'notaObjetiva'=>array());
+					$this->dadosCandidatos[$dadosModulo->numero_inscricao]['modulos'][$nomeModulo]['disciplinas'][$matchDisciplina[0][0]] = array('notaDiscursiva'=>array(), 'notaObjetiva'=>array(), 'notaDiscursivaNum'=>array(), 'notaObjetivaNum'=>array());
 					$arrayDisciplinas[] = $matchDisciplina[0][0];
 				}
 			}
@@ -142,7 +142,13 @@ class manutencao{
 					if($totalNotasAtribuidas == $totalDisciplinas*2){
 						break;
 					}
-					$this->dadosCandidatos[$dadosModulo->numero_inscricao]['modulos'][$nomeModulo]['disciplinas'][$arrayDisciplinas[$contadorDisciplinas-1]][$tipoProva] = trim(str_replace('</td>', '', str_replace('<td  align="right" >', '', $nota)));
+					$auxNota = trim(str_replace('</td>', '', str_replace('<td  align="right" >', '', $nota)));
+					$this->dadosCandidatos[$dadosModulo->numero_inscricao]['modulos'][$nomeModulo]['disciplinas'][$arrayDisciplinas[$contadorDisciplinas-1]][$tipoProva] = $auxNota;
+					if(!strpos($auxNota, '*'))
+						$this->dadosCandidatos[$dadosModulo->numero_inscricao]['modulos'][$nomeModulo]['disciplinas'][$arrayDisciplinas[$contadorDisciplinas-1]][$tipoProva."Num"] = (float) str_replace(',', '.', $auxNota);
+					else
+						$this->dadosCandidatos[$dadosModulo->numero_inscricao]['modulos'][$nomeModulo]['disciplinas'][$arrayDisciplinas[$contadorDisciplinas-1]][$tipoProva."Num"] = (float) 0;
+						
 					unset($matchs[0][$idx]);
 				}
 			}
@@ -159,6 +165,8 @@ class manutencao{
 		foreach($this->dadosCandidatos as $dadosCandidato){
 			foreach($dadosCandidato['modulos'] as $modulo){
 				foreach($modulo['disciplinas'] as $codDisciplina => $disciplina){
+					// Soma das nota objetiva e discursiva
+					$somaNotas = $disciplina['notaObjetiva'] + $disciplina['notaDiscursiva'];
 					
 					$sql = "DECLARE @id_disciplina INT, @cod_disciplina VARCHAR(3), @id_modulo INT, @quantidade_disc INT;
 							DECLARE @id_aluno INT, @id_aluno_modulo INT;
@@ -178,7 +186,7 @@ class manutencao{
 									SET @quantidade_disc = @@IDENTITY
 								END
 
-							INSERT INTO pism_nota VALUES(@quantidade_disc, @id_aluno, '".$disciplina['notaDiscursiva']."', '".$disciplina['notaObjetiva']."')
+							INSERT INTO pism_nota VALUES(@quantidade_disc, @id_aluno, '".$disciplina['notaDiscursiva']."', '".$disciplina['notaObjetiva']."', ".$disciplina['notaDiscursivaNum'].", ".$disciplina['notaObjetivaNum'].", ".$somaNotas.")
 							
 							UPDATE pism_modulo_aluno SET carregado = 'S', nota_pond = '".$dadosCandidato['notaPonderada']."' WHERE id = @id_aluno_modulo;
 							
@@ -209,7 +217,7 @@ $classe->execute(7);
 
 <html>
 	<head>
-		<META HTTP-EQUIV="Refresh" CONTENT="0;URL=http://localhost/manutencaoDadosEnem2Inverse.php">
+		<META HTTP-EQUIV="Refresh" CONTENT="0;URL=http://localhost/manutencaoDadosEnem2.php">
 	</head>
 	
 	<body>
