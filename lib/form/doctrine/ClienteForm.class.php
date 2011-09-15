@@ -19,6 +19,8 @@ class ClienteForm extends BaseClienteForm
     $this->getWidget('created_at')->setOption('label', 'Criado em');
     $this->getWidget('updated_at')->setOption('label', 'Atualizado em');
 
+    $this->validatorSchema['nome']->setMessage('required', 'Preencha o nome do cliente');
+    
     $this->getValidator('created_at')->setOption('required', false);
     $this->getValidator('updated_at')->setOption('required', false);
   }

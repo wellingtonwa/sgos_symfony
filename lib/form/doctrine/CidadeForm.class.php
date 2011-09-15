@@ -13,5 +13,7 @@ class CidadeForm extends BaseCidadeForm
   public function configure()
   {
       unset($this['created_at'], $this['updated_at']);
+      
+      $this->validatorSchema['nome']->setMessage('required', 'Preencha o nome da cidade.');
   }
 }

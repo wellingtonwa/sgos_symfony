@@ -18,6 +18,9 @@ class TipoEquipamentoForm extends BaseTipoEquipamentoForm
 
       $this->getValidator('created_at')->setOption('required', false);
       $this->getValidator('updated_at')->setOption('required', false);
+      
+      $this->validatorSchema['nome']->setMessage('required', 'Preencha o nome do tipo de equipamento');
+      
 
   }
 }
