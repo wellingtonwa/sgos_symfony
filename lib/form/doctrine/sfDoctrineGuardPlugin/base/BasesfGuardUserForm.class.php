@@ -37,7 +37,7 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
       'first_name'       => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'last_name'        => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'email_address'    => new sfValidatorString(array('max_length' => 255)),
-      'username'         => new sfValidatorString(array('max_length' => 128)),
+      'username'         => new sfValidatorString(array('max_length' => 128), array('required'=>'Campo Obrigatório')),
       'algorithm'        => new sfValidatorString(array('max_length' => 128, 'required' => false)),
       'salt'             => new sfValidatorString(array('max_length' => 128, 'required' => false)),
       'password'         => new sfValidatorString(array('max_length' => 128, 'required' => false)),
