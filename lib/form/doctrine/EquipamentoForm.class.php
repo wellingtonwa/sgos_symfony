@@ -15,7 +15,8 @@ class EquipamentoForm extends BaseEquipamentoForm
       $this->getWidget('descricao')->setOption('label', 'Descrição');
       $this->getWidget('idTipoEquipamento')->setOption('label', 'Tipo de Equipamento');
       $this->getWidget('idCliente')->setOption('label', 'Cliente');
-
+      $this->validatorSchema['nome']->setMessage('required', 'Preencha o nome do equipamento');
+      
       $this->getValidator('created_at')->setOption('required', false);
       $this->getValidator('updated_at')->setOption('required', false);
 

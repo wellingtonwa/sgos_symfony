@@ -15,5 +15,7 @@ class sfGuardFormSignin extends BasesfGuardFormSignin
    */
   public function configure()
   {
+      $this->validatorSchema['username']->setMessage('required', 'Campo obrigatório.');
+      $this->validatorSchema['password']->setMessage('required', 'Campo obrigatório.');
   }
 }

@@ -176,7 +176,7 @@ class manutencao{
 									SET @quantidade_disc = @@IDENTITY
 								END
 
-							INSERT INTO pism_nota VALUES(@quantidade_disc, @id_aluno, '".$disciplina['notaDiscursiva']."', '".$disciplina['notaObjetiva']."')
+							INSERT INTO pism_nota VALUES(@quantidade_disc, @id_aluno, '".$disciplina['notaDiscursiva']."', '".$disciplina['notaObjetiva']."', ".$disciplina['notaDiscursivaNum'].", ".$disciplina['notaObjetivaNum'].", ".$somaNotas.")
 							
 							UPDATE pism_modulo_aluno SET carregado = 'S', nota_pond = '".$dadosCandidato['notaPonderada']."' WHERE id = @id_aluno_modulo;
 							

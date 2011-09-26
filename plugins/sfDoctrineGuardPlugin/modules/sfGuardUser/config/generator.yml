@@ -39,7 +39,7 @@ generator:
           "Permissions and groups": [is_active, is_super_admin, groups_list, permissions_list]
 
       edit:
-        title: Eitando Usuário "%%username%%"
+        title: Editando Usuário "%%username%%"
         actions: {_save: {label: salvar}, _list: {label: voltar}}
 
       new:

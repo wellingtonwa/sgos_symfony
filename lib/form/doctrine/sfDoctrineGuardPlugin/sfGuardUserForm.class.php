@@ -12,5 +12,8 @@ class sfGuardUserForm extends PluginsfGuardUserForm
 {
   public function configure()
   {
+      
+      var_dump($this->validatorSchema['username']);
+      
   }
 }
