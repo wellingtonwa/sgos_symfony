@@ -21,7 +21,7 @@ generator:
         title: Lista de Tipos de Equipamento
         display: [nome, descricao]
       filter:
-        display: [nome, descricao, created_at]
+        display: [nome, descricao]
       form:    ~
       edit:
         title: Editando %%nome%%

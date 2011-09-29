@@ -15,6 +15,20 @@ class ComponenteFormFilter extends BaseComponenteFormFilter
 
       $this->getWidget('preco')->setOption('empty_label', 'vazio');
       $this->getWidget('created_at')->setOption('template', 'de %from_date% <br>até %to_date%');
-
+      
+      $this->setValidator("preco", new sfValidatorLeastOne(array()));   
+      
   }
+}
+
+
+class sfValidatorLeastOne extends sfValidatorBase{
+    
+    protected function doClean($value){
+        
+        var_dump($value);
+        
+        exit;
+    }
+    
 }

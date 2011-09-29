@@ -6,7 +6,7 @@ class SolicitacaoForm extends BaseSolicitacaoForm{
     public function   configure() {
 
 
-        
+        unset($this['created_at'], $this['updated_at'], $this['idOrdemServico']);
 
         $this->widgetSchema['email']->setOption('label', 'E-mail');
         $this->widgetSchema['telefone1']->setOption('label', 'Telefone Comercial');
@@ -26,5 +26,7 @@ class SolicitacaoForm extends BaseSolicitacaoForm{
 
     }
 }
+
+
 
 ?>

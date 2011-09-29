@@ -20,6 +20,6 @@ class EquipamentoFormFilter extends BaseEquipamentoFormFilter
 
       $this->getValidator('created_at')->setOption('required', false);
       $this->getValidator('updated_at')->setOption('required', false);
-
+      
   }
 }
