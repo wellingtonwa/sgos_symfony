@@ -27,9 +27,7 @@
                 <a href="<?php echo $sf_context->getConfiguration()->generateFrontendUrl('ordem_servico') ?>">Área do Usuário</a>
             </div>
         </div>
-        <div id="centro">
             <?php echo $sf_content ?>
-        </div>
         <br/><br/>
         <div id="footer">
            RODAPE

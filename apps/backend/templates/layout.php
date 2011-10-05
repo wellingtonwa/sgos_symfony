@@ -54,13 +54,17 @@
             </ul>
         <?php endif; ?>
         
-        <div style="overflow: hidden; width: 80%" class="ui-corner-all">
-            <div id="centro">
-                <div id="conteudo">
+        <?php if($sf_user->isAuthenticated()) :?>
+            <div style="overflow: hidden; width: 80%" class="ui-corner-all">
+                <div id="centro">
+                    <div id="conteudo">
+        <?php  endif; ?>
                     <?php echo $sf_content ?>
+        <?php if($sf_user->isAuthenticated()) :?>
+                    </div>
                 </div>
             </div>
-        </div>
+        <?php  endif; ?>
         <div class="clear1"></div>
         <br/><br/>
         <div id="footer">
